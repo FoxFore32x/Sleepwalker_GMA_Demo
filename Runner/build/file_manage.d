@@ -1,1 +1,2 @@
-file_manage.o: /tmp/GM_Anywhere/Runner/source/helpers/file_manage.cpp
+file_manage.o: \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/helpers/file_manage.cpp

@@ -189,6 +189,7 @@ public:
     GMvar& GetVar(int var, Object& dummy_instance) {
         return Objects()->GetVar(var);
     }
+
 };
 
 inline GMvar& GetVar(int var, Object& instance) {
@@ -347,3 +348,4 @@ inline global_bleh global;
 extern Object* self; 
 extern ObjectType vector_orpgPlayer;
 extern ObjectType vector_orpgWall;
+extern ObjectType vector_oCamera;

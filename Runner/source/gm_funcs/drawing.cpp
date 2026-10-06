@@ -228,6 +228,79 @@ unsigned int drawcolor = c_white;
         GX_End();
     }
 
+    void draw_sprite_part(int draw_sprite, float subimg, float left, float top, float width, float height, float draw_x, float draw_y){ 
+        GXTexObj localTex;
+        if (TPL_GetTexture(&spriteTPL, draw_sprite-round(subimg), &localTex) != 0)
+            return;
+
+        GX_LoadTexObj(&localTex, GX_TEXMAP0);
+        GX_Begin(GX_TRIANGLESTRIP, GX_VTXFMT0, 4);
+
+        int realsprite_width = sprite_get_width(draw_sprite);
+        int realsprite_height = sprite_get_height(draw_sprite);
+
+        float u1 = left / realsprite_width;
+        float v1 = top / realsprite_height;
+        float u2 = (left + width) / realsprite_width;
+        float v2 = (top + height) / realsprite_height;
+
+        //Draw top Left
+        GX_Position2f32(draw_x-sprite_get_xoffset(draw_sprite), draw_y-sprite_get_yoffset(draw_sprite));
+        GX_TexCoord2f32(u1, v1);
+
+        //Draw top Right
+        GX_Position2f32(draw_x+realsprite_width-sprite_get_xoffset(draw_sprite), draw_y-sprite_get_yoffset(draw_sprite));
+        GX_TexCoord2f32(u2, v1);
+
+        //Draw bottom Left
+        GX_Position2f32(draw_x-sprite_get_xoffset(draw_sprite), draw_y+realsprite_height-sprite_get_yoffset(draw_sprite));
+        GX_TexCoord2f32(u1, v2);
+
+        //Draw bottom Right
+        GX_Position2f32(draw_x+realsprite_width-sprite_get_xoffset(draw_sprite), draw_y+realsprite_height-sprite_get_yoffset(draw_sprite)); 
+        GX_TexCoord2f32(u2, v2);
+
+        GX_End();
+    }
+
+    void draw_sprite_part_ext(int draw_sprite, float subimg, float left, float top, float width, float height, float draw_x, float draw_y, float scale_x, float scale_y, float rotation, float color, float alpha){ 
+        GXTexObj localTex;
+        if (TPL_GetTexture(&spriteTPL, draw_sprite-round(subimg), &localTex) != 0)
+            return;
+
+        GX_LoadTexObj(&localTex, GX_TEXMAP0);
+        GX_Begin(GX_TRIANGLESTRIP, GX_VTXFMT0, 4);
+
+        int realsprite_width = sprite_get_width(draw_sprite);
+        int realsprite_height = sprite_get_height(draw_sprite);
+
+        float u1 = left / realsprite_width;
+        float v1 = top / realsprite_height;
+        float u2 = (left + width) / realsprite_width;
+        float v2 = (top + height) / realsprite_height;
+
+        float real_width = width * scale_x;
+        float real_height = height * scale_y;
+
+        //Draw top Left
+        GX_Position2f32(draw_x-sprite_get_xoffset(draw_sprite)*real_width, draw_y-sprite_get_yoffset(draw_sprite)*real_height);
+        GX_TexCoord2f32(u1, v1);
+
+        //Draw top Right
+        GX_Position2f32(draw_x+real_width-sprite_get_xoffset(draw_sprite)*real_width, draw_y-sprite_get_yoffset(draw_sprite)*real_height);
+        GX_TexCoord2f32(u2, v1);
+
+        //Draw bottom Left
+        GX_Position2f32(draw_x-sprite_get_xoffset(draw_sprite)*real_width, draw_y+real_height-sprite_get_yoffset(draw_sprite)*real_height);
+        GX_TexCoord2f32(u1, v2);
+
+        //Draw bottom Right
+        GX_Position2f32(draw_x+real_width-sprite_get_xoffset(draw_sprite)*real_width, draw_y+real_height-sprite_get_yoffset(draw_sprite)*real_height); 
+        GX_TexCoord2f32(u2, v2);
+
+        GX_End();
+    }
+
     void draw_text(float _x, float _y, const char* text){
         //So empty...
     }
@@ -332,6 +405,65 @@ void draw_sprite_tiled(int draw_sprite, float subimg, float draw_x, float draw_y
 
 void draw_set_font(int font){
     //NOTHING, EMPTY, STUPID!!!
+}
+
+void draw_tile(int tileset, int data, int frame, float draw_x, float draw_y){
+    draw_sprite_part(tileSprite[tileset], 0, 0 + data, 0 + data, TileSetBoxW[tileset], TileSetBoxH[tileset],draw_x + boxOffsetX[tileset], draw_y + boxOffsetY[tileset]);
+}
+
+#include <climits>
+
+void placeHolderTileRoomFunc(
+    int tileset,
+    const int* data,
+    int dataSize,
+    int roomWidth
+){
+    int tileIndex = 0;
+
+    for(int i = 0; i < dataSize; ){
+        int instruction = data[i++];
+
+        if(instruction < 0){
+            // Negative = repeat the next tile value
+            int count = -instruction;
+            int tile = data[i++];
+
+            for(int j = 0; j < count; j++){
+                int tx = tileIndex % roomWidth;
+                int ty = tileIndex / roomWidth;
+
+                draw_tile(
+                    tileset,
+                    tile,
+                    0,
+                    tx * TileSetBoxW[tileset],
+                    ty * TileSetBoxH[tileset]
+                );
+
+                tileIndex++;
+            }
+        }
+        else if(instruction > 0){
+            // Positive = next N values are literal tiles
+            for(int j = 0; j < instruction; j++){
+                int tile = data[i++];
+
+                int tx = tileIndex % roomWidth;
+                int ty = tileIndex / roomWidth;
+
+                draw_tile(
+                    tileset,
+                    tile,
+                    0,
+                    tx * TileSetBoxW[tileset],
+                    ty * TileSetBoxH[tileset]
+                );
+
+                tileIndex++;
+            }
+        }
+    }
 }
 
 #pragma endregion

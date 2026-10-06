@@ -1,5 +1,6 @@
-main.o: /tmp/GM_Anywhere/Runner/source/main.cpp \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/input.h \
+main.o: \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/main.cpp \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/input.h \
  /opt/devkitpro/libogc/include/gccore.h \
  /opt/devkitpro/libogc/include/ogc/dsp.h \
  /opt/devkitpro/libogc/include/gctypes.h \
@@ -49,21 +50,21 @@ main.o: /tmp/GM_Anywhere/Runner/source/main.cpp \
  /opt/devkitpro/libogc/include/ogc/usbgecko.h \
  /opt/devkitpro/libogc/include/ogc/video_types.h \
  /opt/devkitpro/libogc/include/ogc/texconv.h \
- /tmp/GM_Anywhere/Runner/source/helpers/other.h \
- /tmp/GM_Anywhere/Runner/source/helpers/../variable_handler.h \
- /tmp/GM_Anywhere/Runner/source/helpers/file_manage.h \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/drawing.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/helpers/other.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/helpers/../variable_handler.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/helpers/file_manage.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/drawing.h \
  /opt/devkitpro/libogc/include/ogc/tpl.h \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/misc.h \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/../gml/structs.h \
- /tmp/GM_Anywhere/Runner/source/room_handler.h \
- /tmp/GM_Anywhere/Runner/source/helpers/asset_toid.h \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/audio.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/misc.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../gml/structs.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/room_handler.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/helpers/asset_toid.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/audio.h \
  /opt/devkitpro/libogc/include/asndlib.h \
  /opt/devkitpro/libogc/include/ogc/lwp_watchdog.h \
  /opt/devkitpro/libogc/include/ogc/../ogcsys.h \
  /opt/devkitpro/libogc/include/ogc/../tuxedo/ppc/clock.h
-/tmp/GM_Anywhere/Runner/source/gm_funcs/input.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/input.h:
 /opt/devkitpro/libogc/include/gccore.h:
 /opt/devkitpro/libogc/include/ogc/dsp.h:
 /opt/devkitpro/libogc/include/gctypes.h:
@@ -113,16 +114,16 @@ main.o: /tmp/GM_Anywhere/Runner/source/main.cpp \
 /opt/devkitpro/libogc/include/ogc/usbgecko.h:
 /opt/devkitpro/libogc/include/ogc/video_types.h:
 /opt/devkitpro/libogc/include/ogc/texconv.h:
-/tmp/GM_Anywhere/Runner/source/helpers/other.h:
-/tmp/GM_Anywhere/Runner/source/helpers/../variable_handler.h:
-/tmp/GM_Anywhere/Runner/source/helpers/file_manage.h:
-/tmp/GM_Anywhere/Runner/source/gm_funcs/drawing.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/helpers/other.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/helpers/../variable_handler.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/helpers/file_manage.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/drawing.h:
 /opt/devkitpro/libogc/include/ogc/tpl.h:
-/tmp/GM_Anywhere/Runner/source/gm_funcs/misc.h:
-/tmp/GM_Anywhere/Runner/source/gm_funcs/../gml/structs.h:
-/tmp/GM_Anywhere/Runner/source/room_handler.h:
-/tmp/GM_Anywhere/Runner/source/helpers/asset_toid.h:
-/tmp/GM_Anywhere/Runner/source/gm_funcs/audio.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/misc.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../gml/structs.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/room_handler.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/helpers/asset_toid.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/audio.h:
 /opt/devkitpro/libogc/include/asndlib.h:
 /opt/devkitpro/libogc/include/ogc/lwp_watchdog.h:
 /opt/devkitpro/libogc/include/ogc/../ogcsys.h:

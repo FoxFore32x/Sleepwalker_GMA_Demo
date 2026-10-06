@@ -44,6 +44,8 @@ extern unsigned int drawcolor;
 //draw stuff
 void draw_sprite(int draw_sprite, float subimg, float draw_x, float draw_y);
 void draw_sprite_ext(int draw_sprite, float subimg, float draw_x, float draw_y, float scale_x, float scale_y, float rotation, float color, float alpha);
+void draw_sprite_part(int draw_sprite, float subimg, float left, float top, float width, float height, float draw_x, float draw_y);
+void draw_sprite_part_ext(int draw_sprite, float subimg, float left, float top, float width, float height, float draw_x, float draw_y, float scale_x, float scale_y, float rotation, float color, float alpha);
 void drawing_init();
 void scr_endframe();
 void draw_text(float _x, float _y, const char* text);
@@ -66,6 +68,16 @@ void draw_set_halign(int type);
 void draw_set_valign(int type);
 int draw_get_halign(int type);
 int draw_get_valign(int type);
+
+//tilesets
+
+void draw_tile(int tileset, int data, int frame, float draw_x, float draw_y);
+void placeHolderTileRoomFunc(
+    int tileset,
+    const int* data,
+    int dataSize,
+    int roomWidth
+);
 
 //3DS
 #ifdef __3DS__

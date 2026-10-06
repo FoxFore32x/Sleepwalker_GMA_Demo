@@ -1,7 +1,8 @@
-misc.o: /tmp/GM_Anywhere/Runner/source/gm_funcs/misc.cpp \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/misc.h \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/../variable_handler.h \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/../gml/structs.h
-/tmp/GM_Anywhere/Runner/source/gm_funcs/misc.h:
-/tmp/GM_Anywhere/Runner/source/gm_funcs/../variable_handler.h:
-/tmp/GM_Anywhere/Runner/source/gm_funcs/../gml/structs.h:
+misc.o: \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/misc.cpp \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/misc.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../variable_handler.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../gml/structs.h
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/misc.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../variable_handler.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../gml/structs.h:

@@ -108,11 +108,6 @@ void orpgPlayer_create() {
 // Puede escribir su código en este editor
 controlsSetup();
 
-/*	bufferTime = 150;
-
-	jumpKeyBuffered = 0;
-	jumpKeyBufferTimer = 0;
-*/
 audio_play_sound(mu_overworldRPG, 0, 1);
 hsp = 0;
 vsp = 0;
@@ -127,86 +122,6 @@ void orpgPlayer_step() {
 // Puede escribir su código en este editor
 scr_getinput();
 
-/*	gamepad_set_axis_deadzone(0, 0.27);
-
-	key_left =
-		keyboard_check(ord("A"))
-		|| (gamepad_axis_value(0, gp_axislh) < 0)
-		|| gamepad_button_check(0, gp_padl);
-	key_left = clamp(key_left, 0, 1);
-
-	key_right =
-		keyboard_check(ord("D"))
-		|| (gamepad_axis_value(0, gp_axislh) > 0)
-		|| gamepad_button_check(0, gp_padr);
-	key_right = clamp(key_right, 0, 1);
-
-	key_up =
-		keyboard_check(ord("W"))
-		|| (gamepad_axis_value(0, gp_axislv) < 0)
-		|| gamepad_button_check(0, gp_padu);
-	key_up = clamp(key_up, 0, 1);
-
-	key_down =
-		keyboard_check(ord("S"))
-		|| (gamepad_axis_value(0, gp_axislv) > 0)
-		|| gamepad_button_check(0, gp_padd);
-	key_down = clamp(key_down, 0, 1);
-
-	//ACTIONS
-	key_run = keyboard_check(ord("O")) || gamepad_button_check(0, gp_face3);
-	key_run_2 =
-		keyboard_check_pressed(ord("O")) || gamepad_button_check_pressed(0, gp_face3);
-	key_run_3 =
-		keyboard_check_released(ord("O")) || gamepad_button_check_released(0, gp_face3);
-
-	key_jump = keyboard_check(ord("P")) || gamepad_button_check(0, gp_face1);
-	key_jump = clamp(key_jump, 0, 1);
-
-	key_jump_2 =
-		keyboard_check_pressed(ord("P")) || gamepad_button_check_pressed(0, gp_face1);
-	key_jump_2 = clamp(key_jump_2, 0, 1);
-
-	if (key_jump_2) {
-		jumpKeyBufferTimer = bufferTime;
-	}
-	if (jumpKeyBufferTimer > 0) {
-		jumpKeyBuffered = 1;
-		jumpKeyBufferTimer--;
-	} else {
-		jumpKeyBuffered = 0;
-	}
-
-	key_jump_3 =
-		keyboard_check_released(ord("P")) || gamepad_button_check_released(0, gp_face1);
-	key_jump_3 = clamp(key_jump_3, 0, 1);
-
-	//Jump key Buffering
-
-	key_crouch =
-		keyboard_check(vk_shift)
-		|| gamepad_button_check(0, gp_face2)
-		|| gamepad_button_check(0, gp_shoulderrb);
-	key_crouch = clamp(key_crouch, 0, 1);
-
-	key_crouch_2 =
-		keyboard_check_pressed(vk_shift)
-		|| gamepad_button_check_pressed(0, gp_face2)
-		|| gamepad_button_check_pressed(0, gp_shoulderrb);
-	key_crouch_2 = clamp(key_crouch_2, 0, 1);
-
-	key_crouch_3 =
-		keyboard_check_released(vk_shift)
-		|| gamepad_button_check_released(0, gp_face2)
-		|| gamepad_button_check_released(0, gp_shoulderrb);
-	key_crouch_3 = clamp(key_crouch_3, 0, 1);
-
-	key_Start =
-		keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(0, gp_start);
-
-	debugCR =
-		keyboard_check_pressed(ord("C")) || gamepad_button_check_pressed(0, gp_select);
-*/
 hsp = (key_right - key_left) * spd;
 
 vsp = (key_down - key_up) * spd;

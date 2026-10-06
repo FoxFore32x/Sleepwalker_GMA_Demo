@@ -22,3 +22,24 @@ extern int SpriteCollideRIGHT[];
 extern int SpriteFrameCount[];
 extern float SpriteAnimTimer[];
 extern int SpriteAnimSpeedType[];
+
+//Tilesets
+
+//Box Width and Height
+extern int TileSetBoxW[];
+extern int TileSetBoxH[];
+
+//Box Offset
+extern int boxOffsetX[];
+extern int boxOffsetY[];
+
+//Box Division
+extern int boxDivisionX[];
+extern int boxDivisionY[];
+
+//Box Edge
+extern int edgeX[];
+extern int edgeY[];
+
+//Tileset sprite
+extern int tileSprite[];

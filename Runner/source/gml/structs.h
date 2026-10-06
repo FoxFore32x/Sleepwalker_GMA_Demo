@@ -52,6 +52,13 @@ typedef struct{
     int ID;
 } GMSprite;
 
+typedef struct{
+    int boxW, boxH,
+    boxOffsetX, boxOffsetY,
+    boxDivisionX, boxDivisionY,
+    edgeX, edgeY;
+} GMTiles;
+
 enum LayerType {
     LAYER_BACKGROUND = 0,
     LAYER_INSTANCE = 1,
@@ -75,6 +82,12 @@ typedef struct{
     int sprite;
     
 } LayerAssets;
+
+typedef struct{
+    int cnt;
+    int* tiles;
+    GMTiles tileSet;
+} LayerTiles;
 
 typedef struct{
 
@@ -102,9 +115,18 @@ typedef struct {
     int assetCount;
 } GMLayerAsset;
 
+typedef struct {
+    int tileset;
+    const int* data;
+    int xPos, yPos;
+    int effect; //default: 0 (nothing)
+} GMLayerTile;
+
 typedef struct{
+    const char* name;
     int type, depth;
     const void* data;
+    bool visible;
 } GMLayer;
 
 typedef struct{

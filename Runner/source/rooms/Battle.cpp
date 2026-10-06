@@ -25,8 +25,8 @@ Battle_inst_0_data,
 };
 
 static const GMLayer Battle_layers[] = {
-    { LAYER_INSTANCE, 0, &Battle_inst_0 },
-    { LAYER_BACKGROUND, 100, &Battle_bg_1 },
+    { "Instances", LAYER_INSTANCE, 0, &Battle_inst_0 },
+    { "Background", LAYER_BACKGROUND, 100, &Battle_bg_1 },
 };
 
 static GMViewPorts Battle_views[] = {

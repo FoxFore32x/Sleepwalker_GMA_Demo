@@ -23,6 +23,8 @@
 
 #define function GMvar
 
+#pragma push_macro("spd")
+
 #undef spd
 
 // Los recursos de Script han cambiado para la v2.3.0 Consulta
@@ -82,6 +84,7 @@ function evMapScroll(GMvar dir, GMvar dist, GMvar spd) {
 	return GMvar();
 }
 
+#pragma pop_macro("spd")
 
 
 // Los recursos de Script han cambiado para la v2.3.0 Consulta

@@ -1,5 +1,6 @@
-room_handler.o: /tmp/GM_Anywhere/Runner/source/room_handler.cpp \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/drawing.h \
+room_handler.o: \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/room_handler.cpp \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/drawing.h \
  /opt/devkitpro/libogc/include/gccore.h \
  /opt/devkitpro/libogc/include/ogc/dsp.h \
  /opt/devkitpro/libogc/include/gctypes.h \
@@ -50,14 +51,14 @@ room_handler.o: /tmp/GM_Anywhere/Runner/source/room_handler.cpp \
  /opt/devkitpro/libogc/include/ogc/video_types.h \
  /opt/devkitpro/libogc/include/ogc/texconv.h \
  /opt/devkitpro/libogc/include/ogc/tpl.h \
- /tmp/GM_Anywhere/Runner/source/room_handler.h \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/misc.h \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/../variable_handler.h \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/../gml/structs.h \
- /tmp/GM_Anywhere/Runner/source/helpers/../rooms/Battle.h \
- /tmp/GM_Anywhere/Runner/source/helpers/../rooms/test.h \
- /tmp/GM_Anywhere/Runner/source/helpers/asset_toid.h
-/tmp/GM_Anywhere/Runner/source/gm_funcs/drawing.h:
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/room_handler.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/misc.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../variable_handler.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../gml/structs.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/helpers/../rooms/Battle.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/helpers/../rooms/test.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/helpers/asset_toid.h
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/drawing.h:
 /opt/devkitpro/libogc/include/gccore.h:
 /opt/devkitpro/libogc/include/ogc/dsp.h:
 /opt/devkitpro/libogc/include/gctypes.h:
@@ -108,10 +109,10 @@ room_handler.o: /tmp/GM_Anywhere/Runner/source/room_handler.cpp \
 /opt/devkitpro/libogc/include/ogc/video_types.h:
 /opt/devkitpro/libogc/include/ogc/texconv.h:
 /opt/devkitpro/libogc/include/ogc/tpl.h:
-/tmp/GM_Anywhere/Runner/source/room_handler.h:
-/tmp/GM_Anywhere/Runner/source/gm_funcs/misc.h:
-/tmp/GM_Anywhere/Runner/source/gm_funcs/../variable_handler.h:
-/tmp/GM_Anywhere/Runner/source/gm_funcs/../gml/structs.h:
-/tmp/GM_Anywhere/Runner/source/helpers/../rooms/Battle.h:
-/tmp/GM_Anywhere/Runner/source/helpers/../rooms/test.h:
-/tmp/GM_Anywhere/Runner/source/helpers/asset_toid.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/room_handler.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/misc.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../variable_handler.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../gml/structs.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/helpers/../rooms/Battle.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/helpers/../rooms/test.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/helpers/asset_toid.h:

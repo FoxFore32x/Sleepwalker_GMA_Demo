@@ -1,8 +1,9 @@
-input.o: /tmp/GM_Anywhere/Runner/source/gm_funcs/input.cpp \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/misc.h \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/../variable_handler.h \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/../gml/structs.h \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/input.h \
+input.o: \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/input.cpp \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/misc.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../variable_handler.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../gml/structs.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/input.h \
  /opt/devkitpro/libogc/include/gccore.h \
  /opt/devkitpro/libogc/include/ogc/dsp.h \
  /opt/devkitpro/libogc/include/gctypes.h \
@@ -52,10 +53,10 @@ input.o: /tmp/GM_Anywhere/Runner/source/gm_funcs/input.cpp \
  /opt/devkitpro/libogc/include/ogc/usbgecko.h \
  /opt/devkitpro/libogc/include/ogc/video_types.h \
  /opt/devkitpro/libogc/include/ogc/texconv.h
-/tmp/GM_Anywhere/Runner/source/gm_funcs/misc.h:
-/tmp/GM_Anywhere/Runner/source/gm_funcs/../variable_handler.h:
-/tmp/GM_Anywhere/Runner/source/gm_funcs/../gml/structs.h:
-/tmp/GM_Anywhere/Runner/source/gm_funcs/input.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/misc.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../variable_handler.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../gml/structs.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/input.h:
 /opt/devkitpro/libogc/include/gccore.h:
 /opt/devkitpro/libogc/include/ogc/dsp.h:
 /opt/devkitpro/libogc/include/gctypes.h:

@@ -106,7 +106,7 @@ void orpgWall_reset_frame() {
 	orpgWall_call_index = 0;
 }
 
-void orpgWall_runevents(float NEWX, float NEWY, float NEWXSCALE, float NEWYSCALE, float NEWID) {
+void orpgWall_runevents(float NEWX, float NEWY, float NEWXSCALE, float NEWYSCALE, float NEWID, bool VISIBLE) {
 	//printf("RUNNING OBJECT: orpgWall\n");
 	bool found = false;
 	for(size_t j = 0; j < vector_orpgWall.instances.size(); j++){
@@ -121,7 +121,7 @@ void orpgWall_runevents(float NEWX, float NEWY, float NEWXSCALE, float NEWYSCALE
 		self = &vector_orpgWall.instances[j];
 		CurrentObjectRunning = self;
 		orpgWall_step();
-		orpgWall_draw();
+		if(VISIBLE) orpgWall_draw();
 
 	}
 	if (SpriteAnimSpeedType[sprite_index] == 0){

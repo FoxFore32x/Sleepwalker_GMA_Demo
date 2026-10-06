@@ -1,10 +1,11 @@
-audio.o: /tmp/GM_Anywhere/Runner/source/gm_funcs/audio.cpp \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/audio.h \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/../helpers/other.h \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/../helpers/../variable_handler.h \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/misc.h \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/../gml/structs.h \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/../include_audio.h \
+audio.o: \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/audio.cpp \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/audio.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../helpers/other.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../helpers/../variable_handler.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/misc.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../gml/structs.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../include_audio.h \
  /opt/devkitpro/libogc/include/gccore.h \
  /opt/devkitpro/libogc/include/ogc/dsp.h \
  /opt/devkitpro/libogc/include/gctypes.h \
@@ -54,15 +55,15 @@ audio.o: /tmp/GM_Anywhere/Runner/source/gm_funcs/audio.cpp \
  /opt/devkitpro/libogc/include/ogc/usbgecko.h \
  /opt/devkitpro/libogc/include/ogc/video_types.h \
  /opt/devkitpro/libogc/include/ogc/texconv.h \
- /tmp/GM_Anywhere/Runner/source/gm_funcs/../oggplayer.h \
- /tmp/GM_Anywhere/Runner/build/0_ogg.h \
- /tmp/GM_Anywhere/Runner/build/1_ogg.h
-/tmp/GM_Anywhere/Runner/source/gm_funcs/audio.h:
-/tmp/GM_Anywhere/Runner/source/gm_funcs/../helpers/other.h:
-/tmp/GM_Anywhere/Runner/source/gm_funcs/../helpers/../variable_handler.h:
-/tmp/GM_Anywhere/Runner/source/gm_funcs/misc.h:
-/tmp/GM_Anywhere/Runner/source/gm_funcs/../gml/structs.h:
-/tmp/GM_Anywhere/Runner/source/gm_funcs/../include_audio.h:
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../oggplayer.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/build/0_ogg.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/build/1_ogg.h
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/audio.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../helpers/other.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../helpers/../variable_handler.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/misc.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../gml/structs.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../include_audio.h:
 /opt/devkitpro/libogc/include/gccore.h:
 /opt/devkitpro/libogc/include/ogc/dsp.h:
 /opt/devkitpro/libogc/include/gctypes.h:
@@ -112,6 +113,6 @@ audio.o: /tmp/GM_Anywhere/Runner/source/gm_funcs/audio.cpp \
 /opt/devkitpro/libogc/include/ogc/usbgecko.h:
 /opt/devkitpro/libogc/include/ogc/video_types.h:
 /opt/devkitpro/libogc/include/ogc/texconv.h:
-/tmp/GM_Anywhere/Runner/source/gm_funcs/../oggplayer.h:
-/tmp/GM_Anywhere/Runner/build/0_ogg.h:
-/tmp/GM_Anywhere/Runner/build/1_ogg.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/gm_funcs/../oggplayer.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/build/0_ogg.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/build/1_ogg.h:

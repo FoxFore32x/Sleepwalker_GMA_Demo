@@ -233,6 +233,10 @@ bool instance_exists(ObjectType inst){
 
 #pragma endregion
 
+#pragma region //Tilesets
+
+#pragma endregion
+
 //3ds
 #ifdef __3DS__
     #include <3ds.h>

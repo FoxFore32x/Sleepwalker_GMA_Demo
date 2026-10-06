@@ -1,7 +1,7 @@
 customfuncs.o: \
- /tmp/GM_Anywhere/Runner/source/custom_funcs/customfuncs.cpp \
- /tmp/GM_Anywhere/Runner/source/custom_funcs/customfuncs.h \
- /tmp/GM_Anywhere/Runner/source/custom_funcs/../gm_funcs/drawing.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/customfuncs.cpp \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/customfuncs.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/drawing.h \
  /opt/devkitpro/libogc/include/gccore.h \
  /opt/devkitpro/libogc/include/ogc/dsp.h \
  /opt/devkitpro/libogc/include/gctypes.h \
@@ -52,23 +52,23 @@ customfuncs.o: \
  /opt/devkitpro/libogc/include/ogc/video_types.h \
  /opt/devkitpro/libogc/include/ogc/texconv.h \
  /opt/devkitpro/libogc/include/ogc/tpl.h \
- /tmp/GM_Anywhere/Runner/source/custom_funcs/../gm_funcs/input.h \
- /tmp/GM_Anywhere/Runner/source/custom_funcs/../helpers/asset_toid.h \
- /tmp/GM_Anywhere/Runner/source/custom_funcs/../gm_funcs/misc.h \
- /tmp/GM_Anywhere/Runner/source/custom_funcs/../gm_funcs/../variable_handler.h \
- /tmp/GM_Anywhere/Runner/source/custom_funcs/../gm_funcs/../gml/structs.h \
- /tmp/GM_Anywhere/Runner/source/custom_funcs/../gm_funcs/collision.h \
- /tmp/GM_Anywhere/Runner/source/custom_funcs/../gm_funcs/audio.h \
- /tmp/GM_Anywhere/Runner/source/custom_funcs/../gm_funcs/filesystem.h \
- /tmp/GM_Anywhere/Runner/source/custom_funcs/../helpers/other.h \
- /tmp/GM_Anywhere/Runner/source/custom_funcs/../helpers/var_in_object_running.h \
- /tmp/GM_Anywhere/Runner/source/custom_funcs/../helpers/../gm_funcs/input.h \
- /tmp/GM_Anywhere/Runner/source/custom_funcs/../helpers/../gm_funcs/collision.h \
- /tmp/GM_Anywhere/Runner/source/custom_funcs/../helpers/../gm_funcs/audio.h \
- /tmp/GM_Anywhere/Runner/source/custom_funcs/../helpers/../gm_funcs/filesystem.h \
- /tmp/GM_Anywhere/Runner/source/custom_funcs/../helpers/../helpers/other.h
-/tmp/GM_Anywhere/Runner/source/custom_funcs/customfuncs.h:
-/tmp/GM_Anywhere/Runner/source/custom_funcs/../gm_funcs/drawing.h:
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/input.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/asset_toid.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/misc.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/../variable_handler.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/../gml/structs.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/collision.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/audio.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/filesystem.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/other.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/var_in_object_running.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/../gm_funcs/input.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/../gm_funcs/collision.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/../gm_funcs/audio.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/../gm_funcs/filesystem.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/../helpers/other.h
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/customfuncs.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/drawing.h:
 /opt/devkitpro/libogc/include/gccore.h:
 /opt/devkitpro/libogc/include/ogc/dsp.h:
 /opt/devkitpro/libogc/include/gctypes.h:
@@ -119,18 +119,18 @@ customfuncs.o: \
 /opt/devkitpro/libogc/include/ogc/video_types.h:
 /opt/devkitpro/libogc/include/ogc/texconv.h:
 /opt/devkitpro/libogc/include/ogc/tpl.h:
-/tmp/GM_Anywhere/Runner/source/custom_funcs/../gm_funcs/input.h:
-/tmp/GM_Anywhere/Runner/source/custom_funcs/../helpers/asset_toid.h:
-/tmp/GM_Anywhere/Runner/source/custom_funcs/../gm_funcs/misc.h:
-/tmp/GM_Anywhere/Runner/source/custom_funcs/../gm_funcs/../variable_handler.h:
-/tmp/GM_Anywhere/Runner/source/custom_funcs/../gm_funcs/../gml/structs.h:
-/tmp/GM_Anywhere/Runner/source/custom_funcs/../gm_funcs/collision.h:
-/tmp/GM_Anywhere/Runner/source/custom_funcs/../gm_funcs/audio.h:
-/tmp/GM_Anywhere/Runner/source/custom_funcs/../gm_funcs/filesystem.h:
-/tmp/GM_Anywhere/Runner/source/custom_funcs/../helpers/other.h:
-/tmp/GM_Anywhere/Runner/source/custom_funcs/../helpers/var_in_object_running.h:
-/tmp/GM_Anywhere/Runner/source/custom_funcs/../helpers/../gm_funcs/input.h:
-/tmp/GM_Anywhere/Runner/source/custom_funcs/../helpers/../gm_funcs/collision.h:
-/tmp/GM_Anywhere/Runner/source/custom_funcs/../helpers/../gm_funcs/audio.h:
-/tmp/GM_Anywhere/Runner/source/custom_funcs/../helpers/../gm_funcs/filesystem.h:
-/tmp/GM_Anywhere/Runner/source/custom_funcs/../helpers/../helpers/other.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/input.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/asset_toid.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/misc.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/../variable_handler.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/../gml/structs.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/collision.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/audio.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/filesystem.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/other.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/var_in_object_running.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/../gm_funcs/input.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/../gm_funcs/collision.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/../gm_funcs/audio.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/../gm_funcs/filesystem.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/../helpers/other.h:

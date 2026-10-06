@@ -21,3 +21,6 @@ inline int test = 1; //Room
 #define spTileDowan2 66 //Sprite
 #define spTileShadow 67 //Sprite
 #define sWall 68 //Sprite
+#define tlDowan1 0 //Tileset
+#define tlDowan2 1 //Tileset
+#define tlShadow 2 //Tileset

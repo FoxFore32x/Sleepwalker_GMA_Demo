@@ -1,5 +1,6 @@
-include_audio.o: /tmp/GM_Anywhere/Runner/source/include_audio.cpp \
- /tmp/GM_Anywhere/Runner/source/include_audio.h \
+include_audio.o: \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/include_audio.cpp \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/include_audio.h \
  /opt/devkitpro/libogc/include/gccore.h \
  /opt/devkitpro/libogc/include/ogc/dsp.h \
  /opt/devkitpro/libogc/include/gctypes.h \
@@ -49,10 +50,10 @@ include_audio.o: /tmp/GM_Anywhere/Runner/source/include_audio.cpp \
  /opt/devkitpro/libogc/include/ogc/usbgecko.h \
  /opt/devkitpro/libogc/include/ogc/video_types.h \
  /opt/devkitpro/libogc/include/ogc/texconv.h \
- /tmp/GM_Anywhere/Runner/source/oggplayer.h \
- /tmp/GM_Anywhere/Runner/build/0_ogg.h \
- /tmp/GM_Anywhere/Runner/build/1_ogg.h
-/tmp/GM_Anywhere/Runner/source/include_audio.h:
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/oggplayer.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/build/0_ogg.h \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/build/1_ogg.h
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/include_audio.h:
 /opt/devkitpro/libogc/include/gccore.h:
 /opt/devkitpro/libogc/include/ogc/dsp.h:
 /opt/devkitpro/libogc/include/gctypes.h:
@@ -102,6 +103,6 @@ include_audio.o: /tmp/GM_Anywhere/Runner/source/include_audio.cpp \
 /opt/devkitpro/libogc/include/ogc/usbgecko.h:
 /opt/devkitpro/libogc/include/ogc/video_types.h:
 /opt/devkitpro/libogc/include/ogc/texconv.h:
-/tmp/GM_Anywhere/Runner/source/oggplayer.h:
-/tmp/GM_Anywhere/Runner/build/0_ogg.h:
-/tmp/GM_Anywhere/Runner/build/1_ogg.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/oggplayer.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/build/0_ogg.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/build/1_ogg.h:

@@ -1,4 +1,5 @@
-oggplayer.o: /tmp/GM_Anywhere/Runner/source/oggplayer.c \
+oggplayer.o: \
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/oggplayer.c \
  /opt/devkitpro/libogc/include/asndlib.h \
  /opt/devkitpro/libogc/include/gctypes.h \
  /opt/devkitpro/libogc/include/tuxedo/types.h \
@@ -55,7 +56,7 @@ oggplayer.o: /tmp/GM_Anywhere/Runner/source/oggplayer.c \
  /opt/devkitpro/libogc/include/ogc/usbgecko.h \
  /opt/devkitpro/libogc/include/ogc/video_types.h \
  /opt/devkitpro/libogc/include/ogc/texconv.h \
- /tmp/GM_Anywhere/Runner/source/oggplayer.h
+ /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/oggplayer.h
 /opt/devkitpro/libogc/include/asndlib.h:
 /opt/devkitpro/libogc/include/gctypes.h:
 /opt/devkitpro/libogc/include/tuxedo/types.h:
@@ -112,4 +113,4 @@ oggplayer.o: /tmp/GM_Anywhere/Runner/source/oggplayer.c \
 /opt/devkitpro/libogc/include/ogc/usbgecko.h:
 /opt/devkitpro/libogc/include/ogc/video_types.h:
 /opt/devkitpro/libogc/include/ogc/texconv.h:
-/tmp/GM_Anywhere/Runner/source/oggplayer.h:
+/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/oggplayer.h:

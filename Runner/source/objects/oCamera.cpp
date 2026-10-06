@@ -25,7 +25,7 @@
 
 #define orpgPlayer vector_orpgPlayer
 
-std::vector<Object> vector_oCamera;
+ObjectType vector_oCamera;
 static int oCamera_call_index = 0;
 static int objectid_collided = 0;
 #define x GetVar(varId_x, *self)
@@ -171,8 +171,8 @@ inst.GetVar(varId_y) = NEWY;
 inst.GetVar(varId_image_xscale) = NEWXSCALE;
 inst.GetVar(varId_image_yscale) = NEWYSCALE;
 inst.GetVar(varId_id) = NEWID;
-vector_oCamera.push_back(inst);
-self = &vector_oCamera.back();
+vector_oCamera.instances.push_back(inst);
+self = &vector_oCamera.instances.back();
 oCamera_config();
 oCamera_create();
 }
@@ -184,16 +184,16 @@ void oCamera_reset_frame() {
 void oCamera_runevents(float NEWX, float NEWY, float NEWXSCALE, float NEWYSCALE, float NEWID) {
 	//printf("RUNNING OBJECT: oCamera\n");
 	bool found = false;
-	for(size_t j = 0; j < vector_oCamera.size(); j++){
-		if(vector_oCamera[j].GetVar(varId_id) == NEWID){
+	for(size_t j = 0; j < vector_oCamera.instances.size(); j++){
+		if(vector_oCamera.instances[j].GetVar(varId_id) == NEWID){
 			found = true;
 			break;
 		}
 	}
 	if(!found)
 		oCamera_precreate(NEWX, NEWY, NEWXSCALE, NEWYSCALE, NEWID);
-	for(size_t j = 0; j < vector_oCamera.size(); j++){
-		self = &vector_oCamera[j];
+	for(size_t j = 0; j < vector_oCamera.instances.size(); j++){
+		self = &vector_oCamera.instances[j];
 		CurrentObjectRunning = self;
 		oCamera_step();
 		oCamera_draw();
