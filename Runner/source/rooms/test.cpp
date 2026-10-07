@@ -351,6 +351,16 @@ void scr_runroom_test(){
 	orpgPlayer_reset_frame();
 	oNXCon_reset_frame();
 	orpgWall_reset_frame();
+    placeHolderTileRoomFunc(test_tile_8->tileset, test_tile_8->data, sizeof(test_tile_8_data) / sizeof(test_tile_8_data[0]), room_width);
+    placeHolderTileRoomFunc(test_tile_7->tileset, test_tile_7->data, sizeof(test_tile_7_data) / sizeof(test_tile_7_data[0]), room_width);
+    placeHolderTileRoomFunc(test_tile_6->tileset, test_tile_6->data, sizeof(test_tile_6_data) / sizeof(test_tile_6_data[0]), room_width);
+    placeHolderTileRoomFunc(test_tile_5->tileset, test_tile_5->data, sizeof(test_tile_5_data) / sizeof(test_tile_5_data[0]), room_width);
+    placeHolderTileRoomFunc(test_tile_4->tileset, test_tile_4->data, sizeof(test_tile_4_data) / sizeof(test_tile_4_data[0]), room_width);
+    oCamera_runevents(test_inst_3_data[2].x, test_inst_3_data[2].y, test_inst_3_data[2].scaleX, test_inst_3_data[2].scaleY, test_inst_3_data[2].id);
+    orpgPlayer_runevents(test_inst_3_data[1].x, test_inst_3_data[1].y, test_inst_3_data[1].scaleX, test_inst_3_data[1].scaleY, test_inst_3_data[1].id);
+    oNXCon_runevents(test_inst_3_data[0].x, test_inst_3_data[0].y, test_inst_3_data[0].scaleX, test_inst_3_data[0].scaleY, test_inst_3_data[0].id);
+    placeHolderTileRoomFunc(test_tile_2->tileset, test_tile_2->data, sizeof(test_tile_2_data) / sizeof(test_tile_2_data[0]), room_width);
+    placeHolderTileRoomFunc(test_tile_1->tileset, test_tile_1->data, sizeof(test_tile_1_data) / sizeof(test_tile_1_data[0]), room_width);
 	orpgWall_runevents(test_inst_0_data[0].x, test_inst_0_data[0].y, test_inst_0_data[0].scaleX, test_inst_0_data[0].scaleY, test_inst_0_data[0].id, test_layers[0].visible);
 	orpgWall_runevents(test_inst_0_data[1].x, test_inst_0_data[1].y, test_inst_0_data[1].scaleX, test_inst_0_data[1].scaleY, test_inst_0_data[1].id, test_layers[0].visible);
 	orpgWall_runevents(test_inst_0_data[2].x, test_inst_0_data[2].y, test_inst_0_data[2].scaleX, test_inst_0_data[2].scaleY, test_inst_0_data[2].id, test_layers[0].visible);
@@ -361,14 +371,4 @@ void scr_runroom_test(){
 	orpgWall_runevents(test_inst_0_data[7].x, test_inst_0_data[7].y, test_inst_0_data[7].scaleX, test_inst_0_data[7].scaleY, test_inst_0_data[7].id, test_layers[0].visible);
 	orpgWall_runevents(test_inst_0_data[8].x, test_inst_0_data[8].y, test_inst_0_data[8].scaleX, test_inst_0_data[8].scaleY, test_inst_0_data[8].id, test_layers[0].visible);
 	orpgWall_runevents(test_inst_0_data[9].x, test_inst_0_data[9].y, test_inst_0_data[9].scaleX, test_inst_0_data[9].scaleY, test_inst_0_data[9].id, test_layers[0].visible);
-    /*placeHolderTileRoomFunc(test_tile_1->tileset, test_tile_1->data, sizeof(test_tile_1->data) / sizeof(test_tile_1->data[0]), room_width);
-    placeHolderTileRoomFunc(test_tile_2->tileset, test_tile_2->data, sizeof(test_tile_2->data) / sizeof(test_tile_2->data[0]), room_width);*/
-	oNXCon_runevents(test_inst_3_data[0].x, test_inst_3_data[0].y, test_inst_3_data[0].scaleX, test_inst_3_data[0].scaleY, test_inst_3_data[0].id);
-	orpgPlayer_runevents(test_inst_3_data[1].x, test_inst_3_data[1].y, test_inst_3_data[1].scaleX, test_inst_3_data[1].scaleY, test_inst_3_data[1].id);
-	oCamera_runevents(test_inst_3_data[2].x, test_inst_3_data[2].y, test_inst_3_data[2].scaleX, test_inst_3_data[2].scaleY, test_inst_3_data[2].id);
-    /*placeHolderTileRoomFunc(test_tile_4->tileset, test_tile_4->data, sizeof(test_tile_4->data) / sizeof(test_tile_4->data[0]), room_width);
-    placeHolderTileRoomFunc(test_tile_5->tileset, test_tile_5->data, sizeof(test_tile_5->data) / sizeof(test_tile_5->data[0]), room_width);
-    placeHolderTileRoomFunc(test_tile_6->tileset, test_tile_6->data, sizeof(test_tile_6->data) / sizeof(test_tile_6->data[0]), room_width);
-    placeHolderTileRoomFunc(test_tile_7->tileset, test_tile_7->data, sizeof(test_tile_7->data) / sizeof(test_tile_7->data[0]), room_width);
-    placeHolderTileRoomFunc(test_tile_8->tileset, test_tile_8->data, sizeof(test_tile_8->data) / sizeof(test_tile_8->data[0]), room_width);*/
 }
