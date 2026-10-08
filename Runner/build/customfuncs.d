@@ -60,7 +60,6 @@ customfuncs.o: \
  /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/collision.h \
  /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/audio.h \
  /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/filesystem.h \
- /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/other.h \
  /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/var_in_object_running.h \
  /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/../gm_funcs/input.h \
  /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/../gm_funcs/collision.h \
@@ -127,7 +126,6 @@ customfuncs.o: \
 /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/collision.h:
 /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/audio.h:
 /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../gm_funcs/filesystem.h:
-/home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/other.h:
 /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/var_in_object_running.h:
 /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/../gm_funcs/input.h:
 /home/foxfore32x/Documentos/GitHub/Sleepwalker_GMA_Demo/Runner/source/custom_funcs/../helpers/../gm_funcs/collision.h:

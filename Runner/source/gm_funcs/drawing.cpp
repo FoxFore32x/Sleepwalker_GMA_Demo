@@ -229,16 +229,7 @@ unsigned int drawcolor = c_white;
         GX_End();
     }
 
-    void draw_sprite_part(
-        int draw_sprite,
-        float subimg,
-        float left,
-        float top,
-        float width,
-        float height,
-        float draw_x,
-        float draw_y
-    ){
+    void draw_sprite_part(int draw_sprite, float subimg, float left, float top, float width, float height, float draw_x, float draw_y){
         GXTexObj localTex;
 
         if(TPL_GetTexture(&spriteTPL, draw_sprite - round(subimg), &localTex) != 0)
@@ -426,6 +417,8 @@ void draw_set_font(int font){
 }
 
 void draw_tile(int tileset, int data, int frame, float draw_x, float draw_y){
+    if(data < 0) return;
+    
     int tileW = TileSetBoxW[tileset];
     int tileH = TileSetBoxH[tileset];
 
@@ -448,8 +441,6 @@ void draw_tile(int tileset, int data, int frame, float draw_x, float draw_y){
     );
 }
 
-#define EMPTY_TILE (-2147483648)
-
 void placeHolderTileRoomFunc(int tileset, const int *data, int dataSize, int roomWidth){
     int tileW = TileSetBoxW[tileset];
     int tileH = TileSetBoxH[tileset];
@@ -465,9 +456,9 @@ void placeHolderTileRoomFunc(int tileset, const int *data, int dataSize, int roo
 
     for(int i = 0; i < dataSize; ){
         int instruction = data[i++];
-        if(i >= dataSize) break;
 
-        if(instruction < 0 && instruction != EMPTY_TILE){
+        if(instruction < 0){
+            if(i >= dataSize) break;
             int count = -instruction;
 
             int tile = data[i++];
@@ -476,12 +467,12 @@ void placeHolderTileRoomFunc(int tileset, const int *data, int dataSize, int roo
                 int tx = tileIndex % columns;
                 int ty = tileIndex / columns;
 
-                if(tile != EMPTY_TILE) draw_tile(tileset, tile, 0, tx * tileW, ty * tileH);
+                draw_tile(tileset, tile, 0, tx * tileW, ty * tileH);
 
                 tileIndex++;
             }
         }
-        else if(instruction > 0 && instruction != EMPTY_TILE){
+        else if(instruction > 0){
             for(int j = 0; j < instruction; j++){
 
                 int tile = data[i++];
@@ -489,7 +480,7 @@ void placeHolderTileRoomFunc(int tileset, const int *data, int dataSize, int roo
                 int tx = tileIndex % columns;
                 int ty = tileIndex / columns;
 
-                if(tile != EMPTY_TILE) draw_tile(tileset, tile, 0, tx * tileW, ty * tileH);
+                draw_tile(tileset, tile, 0, tx * tileW, ty * tileH);
 
                 tileIndex++;
             }
