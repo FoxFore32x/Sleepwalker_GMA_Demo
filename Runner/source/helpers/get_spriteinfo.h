@@ -41,5 +41,9 @@ extern int boxDivisionY[];
 extern int edgeX[];
 extern int edgeY[];
 
+//Tile Properties
+extern int TileSetCount[];
+extern int TileSetColumns[];
+
 //Tileset sprite
 extern int tileSprite[];

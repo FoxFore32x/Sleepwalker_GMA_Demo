@@ -24,4 +24,6 @@ int boxDivisionX[] = {0, 0, 0};
 int boxDivisionY[] = {0, 0, 0};
 int edgeX[] = {2, 2, 2};
 int edgeY[] = {2, 2, 2};
+int TileSetCount[] = {64, 72, 4};
+int TileSetColumns[] = {8, 8, 2};
 int tileSprite[] = {spTileDowan1, spTileDowan2, spTileShadow};

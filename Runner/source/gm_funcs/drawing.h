@@ -72,12 +72,7 @@ int draw_get_valign(int type);
 //tilesets
 
 void draw_tile(int tileset, int data, int frame, float draw_x, float draw_y);
-void placeHolderTileRoomFunc(
-    int tileset,
-    const int* data,
-    int dataSize,
-    int roomWidth
-);
+void placeHolderTileRoomFunc(int tileset, const int* data, const size_t dataSize, int roomWidth);
 
 //3DS
 #ifdef __3DS__

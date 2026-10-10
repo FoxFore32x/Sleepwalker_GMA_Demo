@@ -422,9 +422,13 @@ void draw_tile(int tileset, int data, int frame, float draw_x, float draw_y){
     int tileW = TileSetBoxW[tileset];
     int tileH = TileSetBoxH[tileset];
 
-    int tilesetWidth = sprite_get_width(tileSprite[tileset]);
+    if (tileW <= 0 || tileH <= 0) return;
 
-    int columns = tilesetWidth / tileW;
+    //int tilesetWidth = sprite_get_width(tileSprite[tileset]);
+
+    int columns = TileSetColumns[tileset];
+
+    if (columns <= 0 || data >= TileSetCount[tileset]) return;
 
     int tileX = data % columns;
     int tileY = data / columns;
@@ -441,46 +445,49 @@ void draw_tile(int tileset, int data, int frame, float draw_x, float draw_y){
     );
 }
 
-void placeHolderTileRoomFunc(int tileset, const int *data, int dataSize, int roomWidth){
+void placeHolderTileRoomFunc(int tileset, const int *data, const size_t dataSize, int roomWidth){
     int tileW = TileSetBoxW[tileset];
     int tileH = TileSetBoxH[tileset];
-    //Placeholders
-    int SerialiseWidth = 17;
-    int SerialiseHeight = 18;
+
+    if (tileW <= 0 || tileH <= 0 || roomWidth <= 0) return;
 
     int columns = roomWidth / tileW;
 
-    if(columns <= 0) return;
+    if (columns <= 0) return;
 
     int tileIndex = 0;
+    //int totalTiles = columns * (roomWidth > 0 ? INT_MAX / columns : 0);
 
-    for(int i = 0; i < dataSize; ){
+    for (size_t i = 0; i < dataSize; ){
         int instruction = data[i++];
 
-        if(instruction < 0){
-            if(i >= dataSize) break;
-            int count = -instruction;
+        if (instruction == INT_MIN) return;
 
+        if (instruction < 0){
+            if (i >= dataSize) return;
+
+            int count = -instruction;
             int tile = data[i++];
 
-            for(int j = 0; j < count; j++){
+            for (int j = 0; j < count; j++){
                 int tx = tileIndex % columns;
                 int ty = tileIndex / columns;
 
-                draw_tile(tileset, tile, 0, tx * tileW, ty * tileH);
+                if (tile != INT_MIN && tile != 0) draw_tile(tileset, tile, 0, tx * tileW, ty * tileH);
 
                 tileIndex++;
             }
         }
-        else if(instruction > 0){
-            for(int j = 0; j < instruction; j++){
+        else if (instruction > 0){
+            if ((size_t)instruction > dataSize - i) return;
 
+            for (int j = 0; j < instruction; j++){
                 int tile = data[i++];
 
                 int tx = tileIndex % columns;
                 int ty = tileIndex / columns;
 
-                draw_tile(tileset, tile, 0, tx * tileW, ty * tileH);
+                if (tile != INT_MIN && tile != 0) draw_tile(tileset, tile, 0, tx * tileW, ty * tileH);
 
                 tileIndex++;
             }
