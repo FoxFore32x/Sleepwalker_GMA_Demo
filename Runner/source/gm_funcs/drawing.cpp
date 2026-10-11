@@ -195,13 +195,25 @@ unsigned int drawcolor = c_white;
         fb ^= 1;
     }
 
+    static GXTexObj localTex = {};
+    static int loadedTexID = -1;
+
+    bool loadTexture(int texID)
+    {
+        if (loadedTexID == texID) return true;
+
+        if (TPL_GetTexture(&spriteTPL, texID, &localTex) != 0) return false;
+
+        loadedTexID = texID;
+        return true;
+    }
+
     void draw_sprite(int draw_sprite, float subimg, float draw_x, float draw_y){
         draw_sprite_ext(draw_sprite, subimg, draw_x, draw_y, 1, 1, 0, c_white, 1);
     }
     
-    void draw_sprite_ext(int draw_sprite, float subimg, float draw_x, float draw_y, float scale_x, float scale_y, float rotation, float color, float alpha){ 
-        GXTexObj localTex;
-        if (TPL_GetTexture(&spriteTPL, draw_sprite-round(subimg), &localTex) != 0)
+    void draw_sprite_ext(int draw_sprite, float subimg, float draw_x, float draw_y, float scale_x, float scale_y, float rotation, float color, float alpha){
+        if (!loadTexture(draw_sprite - round(subimg)))
             return;
 
         GX_LoadTexObj(&localTex, GX_TEXMAP0);
@@ -230,9 +242,7 @@ unsigned int drawcolor = c_white;
     }
 
     void draw_sprite_part(int draw_sprite, float subimg, float left, float top, float width, float height, float draw_x, float draw_y){
-        GXTexObj localTex;
-
-        if(TPL_GetTexture(&spriteTPL, draw_sprite - round(subimg), &localTex) != 0)
+        if (!loadTexture(draw_sprite - round(subimg)))
             return;
 
         GX_LoadTexObj(&localTex, GX_TEXMAP0);
@@ -417,32 +427,15 @@ void draw_set_font(int font){
 }
 
 void draw_tile(int tileset, int data, int frame, float draw_x, float draw_y){
-    if(data < 0) return;
+    if(data < 0 || data >= TileSetCount[tileset]) return;
     
     int tileW = TileSetBoxW[tileset];
     int tileH = TileSetBoxH[tileset];
-
-    if (tileW <= 0 || tileH <= 0) return;
-
-    //int tilesetWidth = sprite_get_width(tileSprite[tileset]);
-
     int columns = TileSetColumns[tileset];
 
-    if (columns <= 0 || data >= TileSetCount[tileset]) return;
+    if (tileW <= 0 || tileH <= 0 || columns <= 0) return;
 
-    int tileX = data % columns;
-    int tileY = data / columns;
-
-    draw_sprite_part(
-        tileSprite[tileset],
-        0,
-        tileX * tileW,
-        tileY * tileH,
-        tileW,
-        tileH,
-        draw_x + boxOffsetX[tileset],
-        draw_y + boxOffsetY[tileset]
-    );
+    draw_sprite_part(tileSprite[tileset], frame, (data % columns) * tileW, (data / columns) * tileH, tileW, tileH, draw_x + boxOffsetX[tileset], draw_y + boxOffsetY[tileset]);
 }
 
 void placeHolderTileRoomFunc(int tileset, const int *data, const size_t dataSize, int roomWidth){
@@ -452,11 +445,75 @@ void placeHolderTileRoomFunc(int tileset, const int *data, const size_t dataSize
     if (tileW <= 0 || tileH <= 0 || roomWidth <= 0) return;
 
     int columns = roomWidth / tileW;
+    if (columns <= 0) return;
+
+    int tx = 0;
+    int ty = 0;
+
+    for (size_t i = 0; i < dataSize; ){
+        int instruction = data[i++];
+
+        if (instruction == INT_MIN) return;
+
+        int count;
+        int tile = 0;
+
+        if (instruction < 0){
+            if (i >= dataSize) return;
+
+            count = -instruction;
+            tile = data[i++];
+
+            if (tile == 0 || tile == INT_MIN){
+                tx += count;
+                ty += tx / columns;
+                tx %= columns;
+                continue;
+            }
+
+            for (int j = 0; j < count; j++){
+                draw_tile(tileset, tile, 0, tx * tileW, ty * tileH);
+
+                if (++tx >= columns){
+                    tx = 0;
+                    ty++;
+                }
+            }
+        }
+        else if (instruction > 0){
+            if ((size_t)instruction > dataSize - i) return;
+
+            count = instruction;
+
+            for (int j = 0; j < count; j++){
+                tile = data[i++];
+
+                if (tile != 0 && tile != INT_MIN)
+                    draw_tile(tileset, tile, 0, tx * tileW, ty * tileH);
+
+                if (++tx >= columns){
+                    tx = 0;
+                    ty++;
+                }
+            }
+        }
+    }
+}
+
+void placeHolderTileRoomFunc1(int tileset, const int *data, const size_t dataSize, int roomWidth){
+    int tileW = TileSetBoxW[tileset];
+    int tileH = TileSetBoxH[tileset];
+
+    if (tileW <= 0 || tileH <= 0 || roomWidth <= 0) return;
+
+    int columns = roomWidth / tileW;
 
     if (columns <= 0) return;
 
-    int tileIndex = 0;
-    //int totalTiles = columns * (roomWidth > 0 ? INT_MAX / columns : 0);
+    int tx = 0;
+    int ty = 0;
+    int tile = 0;
+    int count = 0;
 
     for (size_t i = 0; i < dataSize; ){
         int instruction = data[i++];
@@ -466,30 +523,35 @@ void placeHolderTileRoomFunc(int tileset, const int *data, const size_t dataSize
         if (instruction < 0){
             if (i >= dataSize) return;
 
-            int count = -instruction;
-            int tile = data[i++];
+            count = -instruction;
+            tile = data[i++];
 
             for (int j = 0; j < count; j++){
-                int tx = tileIndex % columns;
-                int ty = tileIndex / columns;
 
                 if (tile != INT_MIN && tile != 0) draw_tile(tileset, tile, 0, tx * tileW, ty * tileH);
 
-                tileIndex++;
+                tx++;
+
+                if(tx >= columns){
+                    tx = 0;
+                    ty++;
+                }
             }
         }
         else if (instruction > 0){
             if ((size_t)instruction > dataSize - i) return;
 
             for (int j = 0; j < instruction; j++){
-                int tile = data[i++];
-
-                int tx = tileIndex % columns;
-                int ty = tileIndex / columns;
+                tile = data[i++];
 
                 if (tile != INT_MIN && tile != 0) draw_tile(tileset, tile, 0, tx * tileW, ty * tileH);
 
-                tileIndex++;
+                tx++;
+
+                if(tx >= columns){
+                    tx = 0;
+                    ty++;
+                }
             }
         }
     }
