@@ -6281,7 +6281,7 @@ Discarded input sections
  .text._Z11draw_spriteifff
                 0x00000000       0x24 drawing.o
  .text._Z20draw_sprite_part_extiffffffffffff
-                0x00000000      0x2ec drawing.o
+                0x00000000      0x324 drawing.o
  .text._Z9draw_textffPKc
                 0x00000000        0x4 drawing.o
  .text._Z14draw_set_colori
@@ -15016,7 +15016,7 @@ Linker script and memory map
  .eh_frame      0x804d75ec      0x254 collision.o
                                 0x564 (size before relaxing)
  .eh_frame      0x804d7840      0x2f8 drawing.o
-                                0x7d4 (size before relaxing)
+                                0x7d8 (size before relaxing)
  .eh_frame      0x804d7b38        0x0 filesystem.o
                                  0x50 (size before relaxing)
  .eh_frame      0x804d7b38      0x16c input.o
@@ -17228,7 +17228,7 @@ Linker script and memory map
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000   0x427d53
+.debug_info     0x00000000   0x427ddc
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x174 include_audio.o
  .debug_info    0x00000174    0x20ac5 main.o
@@ -17244,60 +17244,60 @@ Linker script and memory map
  .debug_info    0x00215765    0x4c35d orpgWall.o
  .debug_info    0x00261ac2    0x1f156 audio.o
  .debug_info    0x00280c18    0x5d81c collision.o
- .debug_info    0x002de434    0x41743 drawing.o
- .debug_info    0x0031fb77      0x114 filesystem.o
- .debug_info    0x0031fc8b    0x1f178 input.o
- .debug_info    0x0033ee03    0x310dd misc.o
- .debug_info    0x0036fee0    0x67e4d customfuncs.o
- .debug_info    0x003d7d2d     0x13fc oggplayer.o
- .debug_info    0x003d9129     0x3424 /opt/devkitpro/libogc/lib/cube/libasnd.a(asndlib.o)
- .debug_info    0x003dc54d       0x47 /opt/devkitpro/libogc/lib/cube/libogc.a(common_crt0.o)
- .debug_info    0x003dc594       0x4a /opt/devkitpro/libogc/lib/cube/libogc.a(early_init.o)
- .debug_info    0x003dc5de       0xf3 /opt/devkitpro/libogc/lib/cube/libogc.a(default_stacks.o)
- .debug_info    0x003dc6d1      0x665 /opt/devkitpro/libogc/lib/cube/libogc.a(cache.o)
- .debug_info    0x003dcd36      0xe2b /opt/devkitpro/libogc/lib/cube/libogc.a(exception.o)
- .debug_info    0x003ddb61       0x64 /opt/devkitpro/libogc/lib/cube/libogc.a(exception_asm.o)
- .debug_info    0x003ddbc5      0xe82 /opt/devkitpro/libogc/lib/cube/libogc.a(interrupt.o)
- .debug_info    0x003dea47       0x47 /opt/devkitpro/libogc/lib/cube/libogc.a(interrupt_asm.o)
- .debug_info    0x003dea8e     0x2ce0 /opt/devkitpro/libogc/lib/cube/libogc.a(thread.o)
- .debug_info    0x003e176e     0x1bb9 /opt/devkitpro/libogc/lib/cube/libogc.a(sync.o)
- .debug_info    0x003e3327      0xa5c /opt/devkitpro/libogc/lib/cube/libogc.a(tick.o)
- .debug_info    0x003e3d83     0x15e4 /opt/devkitpro/libogc/lib/cube/libogc.a(newlib_syscalls.o)
- .debug_info    0x003e5367      0xf11 /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_queue.o)
- .debug_info    0x003e6278     0x1004 /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_thread.o)
- .debug_info    0x003e727c     0x3268 /opt/devkitpro/libogc/lib/cube/libogc.a(video.o)
- .debug_info    0x003ea4e4     0x20e6 /opt/devkitpro/libogc/lib/cube/libogc.a(pad.o)
- .debug_info    0x003ec5ca     0x8f3c /opt/devkitpro/libogc/lib/cube/libogc.a(system.o)
- .debug_info    0x003f5506     0xd888 /opt/devkitpro/libogc/lib/cube/libogc.a(gx.o)
- .debug_info    0x00402d8e     0x1c96 /opt/devkitpro/libogc/lib/cube/libogc.a(gu.o)
- .debug_info    0x00404a24       0x25 /opt/devkitpro/libogc/lib/cube/libogc.a(gu_psasm.o)
- .debug_info    0x00404a49     0x1348 /opt/devkitpro/libogc/lib/cube/libogc.a(audio.o)
- .debug_info    0x00405d91     0x1b40 /opt/devkitpro/libogc/lib/cube/libogc.a(dsp.o)
- .debug_info    0x004078d1     0x2ab5 /opt/devkitpro/libogc/lib/cube/libogc.a(si.o)
- .debug_info    0x0040a386     0x1cb9 /opt/devkitpro/libogc/lib/cube/libogc.a(tpl.o)
- .debug_info    0x0040c03f     0x11f9 /opt/devkitpro/libogc/lib/cube/libogc.a(timesupp.o)
- .debug_info    0x0040d238      0x9b4 /opt/devkitpro/libogc/lib/cube/libogc.a(sbrk.o)
- .debug_info    0x0040dbec      0x1c1 /opt/devkitpro/libogc/lib/cube/libogc.a(argv.o)
- .debug_info    0x0040ddad     0x11cc /opt/devkitpro/libogc/lib/cube/libogc.a(default_panic.o)
- .debug_info    0x0040ef79      0xca0 /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_alarm.o)
- .debug_info    0x0040fc19     0x3ba1 /opt/devkitpro/libogc/lib/cube/libogc.a(console.o)
- .debug_info    0x004137ba      0x504 /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_wkspace.o)
- .debug_info    0x00413cbe      0xec2 /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_heap.o)
- .debug_info    0x00414b80     0x42d4 /opt/devkitpro/libogc/lib/cube/libogc.a(exi.o)
- .debug_info    0x00418e54       0x25 /opt/devkitpro/libogc/lib/cube/libogc.a(cache_asm.o)
- .debug_info    0x00418e79       0x55 /opt/devkitpro/libogc/lib/cube/libogc.a(console_font_8x16.o)
- .debug_info    0x00418ece     0x3050 /opt/devkitpro/libogc/lib/cube/libogc.a(usbgecko.o)
- .debug_info    0x0041bf1e      0xeae /opt/devkitpro/libogc/lib/cube/libogc.a(kprintf.o)
- .debug_info    0x0041cdcc      0x930 /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_queue.o)
- .debug_info    0x0041d6fc      0x106 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_floatundisf.o)
- .debug_info    0x0041d802      0x695 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_divdi3.o)
- .debug_info    0x0041de97      0x65b /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_udivdi3.o)
- .debug_info    0x0041e4f2      0x672 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_umoddi3.o)
- .debug_info    0x0041eb64     0x5d52 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2.o)
- .debug_info    0x004248b6     0x339f /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2-fde.o)
- .debug_info    0x00427c55       0xfe /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(crtresxgpr.o)
+ .debug_info    0x002de434    0x417cc drawing.o
+ .debug_info    0x0031fc00      0x114 filesystem.o
+ .debug_info    0x0031fd14    0x1f178 input.o
+ .debug_info    0x0033ee8c    0x310dd misc.o
+ .debug_info    0x0036ff69    0x67e4d customfuncs.o
+ .debug_info    0x003d7db6     0x13fc oggplayer.o
+ .debug_info    0x003d91b2     0x3424 /opt/devkitpro/libogc/lib/cube/libasnd.a(asndlib.o)
+ .debug_info    0x003dc5d6       0x47 /opt/devkitpro/libogc/lib/cube/libogc.a(common_crt0.o)
+ .debug_info    0x003dc61d       0x4a /opt/devkitpro/libogc/lib/cube/libogc.a(early_init.o)
+ .debug_info    0x003dc667       0xf3 /opt/devkitpro/libogc/lib/cube/libogc.a(default_stacks.o)
+ .debug_info    0x003dc75a      0x665 /opt/devkitpro/libogc/lib/cube/libogc.a(cache.o)
+ .debug_info    0x003dcdbf      0xe2b /opt/devkitpro/libogc/lib/cube/libogc.a(exception.o)
+ .debug_info    0x003ddbea       0x64 /opt/devkitpro/libogc/lib/cube/libogc.a(exception_asm.o)
+ .debug_info    0x003ddc4e      0xe82 /opt/devkitpro/libogc/lib/cube/libogc.a(interrupt.o)
+ .debug_info    0x003dead0       0x47 /opt/devkitpro/libogc/lib/cube/libogc.a(interrupt_asm.o)
+ .debug_info    0x003deb17     0x2ce0 /opt/devkitpro/libogc/lib/cube/libogc.a(thread.o)
+ .debug_info    0x003e17f7     0x1bb9 /opt/devkitpro/libogc/lib/cube/libogc.a(sync.o)
+ .debug_info    0x003e33b0      0xa5c /opt/devkitpro/libogc/lib/cube/libogc.a(tick.o)
+ .debug_info    0x003e3e0c     0x15e4 /opt/devkitpro/libogc/lib/cube/libogc.a(newlib_syscalls.o)
+ .debug_info    0x003e53f0      0xf11 /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_queue.o)
+ .debug_info    0x003e6301     0x1004 /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_thread.o)
+ .debug_info    0x003e7305     0x3268 /opt/devkitpro/libogc/lib/cube/libogc.a(video.o)
+ .debug_info    0x003ea56d     0x20e6 /opt/devkitpro/libogc/lib/cube/libogc.a(pad.o)
+ .debug_info    0x003ec653     0x8f3c /opt/devkitpro/libogc/lib/cube/libogc.a(system.o)
+ .debug_info    0x003f558f     0xd888 /opt/devkitpro/libogc/lib/cube/libogc.a(gx.o)
+ .debug_info    0x00402e17     0x1c96 /opt/devkitpro/libogc/lib/cube/libogc.a(gu.o)
+ .debug_info    0x00404aad       0x25 /opt/devkitpro/libogc/lib/cube/libogc.a(gu_psasm.o)
+ .debug_info    0x00404ad2     0x1348 /opt/devkitpro/libogc/lib/cube/libogc.a(audio.o)
+ .debug_info    0x00405e1a     0x1b40 /opt/devkitpro/libogc/lib/cube/libogc.a(dsp.o)
+ .debug_info    0x0040795a     0x2ab5 /opt/devkitpro/libogc/lib/cube/libogc.a(si.o)
+ .debug_info    0x0040a40f     0x1cb9 /opt/devkitpro/libogc/lib/cube/libogc.a(tpl.o)
+ .debug_info    0x0040c0c8     0x11f9 /opt/devkitpro/libogc/lib/cube/libogc.a(timesupp.o)
+ .debug_info    0x0040d2c1      0x9b4 /opt/devkitpro/libogc/lib/cube/libogc.a(sbrk.o)
+ .debug_info    0x0040dc75      0x1c1 /opt/devkitpro/libogc/lib/cube/libogc.a(argv.o)
+ .debug_info    0x0040de36     0x11cc /opt/devkitpro/libogc/lib/cube/libogc.a(default_panic.o)
+ .debug_info    0x0040f002      0xca0 /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_alarm.o)
+ .debug_info    0x0040fca2     0x3ba1 /opt/devkitpro/libogc/lib/cube/libogc.a(console.o)
+ .debug_info    0x00413843      0x504 /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_wkspace.o)
+ .debug_info    0x00413d47      0xec2 /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_heap.o)
+ .debug_info    0x00414c09     0x42d4 /opt/devkitpro/libogc/lib/cube/libogc.a(exi.o)
+ .debug_info    0x00418edd       0x25 /opt/devkitpro/libogc/lib/cube/libogc.a(cache_asm.o)
+ .debug_info    0x00418f02       0x55 /opt/devkitpro/libogc/lib/cube/libogc.a(console_font_8x16.o)
+ .debug_info    0x00418f57     0x3050 /opt/devkitpro/libogc/lib/cube/libogc.a(usbgecko.o)
+ .debug_info    0x0041bfa7      0xeae /opt/devkitpro/libogc/lib/cube/libogc.a(kprintf.o)
+ .debug_info    0x0041ce55      0x930 /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_queue.o)
+ .debug_info    0x0041d785      0x106 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_floatundisf.o)
+ .debug_info    0x0041d88b      0x695 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_divdi3.o)
+ .debug_info    0x0041df20      0x65b /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_udivdi3.o)
+ .debug_info    0x0041e57b      0x672 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_umoddi3.o)
+ .debug_info    0x0041ebed     0x5d52 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2.o)
+ .debug_info    0x0042493f     0x339f /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2-fde.o)
+ .debug_info    0x00427cde       0xfe /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(crtresxgpr.o)
 
-.debug_abbrev   0x00000000    0x1c734
+.debug_abbrev   0x00000000    0x1c721
  *(.debug_abbrev)
  .debug_abbrev  0x00000000       0xab include_audio.o
  .debug_abbrev  0x000000ab      0xf85 main.o
@@ -17313,60 +17313,60 @@ Linker script and memory map
  .debug_abbrev  0x0000a663     0x137c orpgWall.o
  .debug_abbrev  0x0000b9df      0xf25 audio.o
  .debug_abbrev  0x0000c904     0x143a collision.o
- .debug_abbrev  0x0000dd3e     0x1509 drawing.o
- .debug_abbrev  0x0000f247       0xb2 filesystem.o
- .debug_abbrev  0x0000f2f9      0xff8 input.o
- .debug_abbrev  0x000102f1     0x11e4 misc.o
- .debug_abbrev  0x000114d5     0x1273 customfuncs.o
- .debug_abbrev  0x00012748      0x40f oggplayer.o
- .debug_abbrev  0x00012b57      0x52b /opt/devkitpro/libogc/lib/cube/libasnd.a(asndlib.o)
- .debug_abbrev  0x00013082       0x26 /opt/devkitpro/libogc/lib/cube/libogc.a(common_crt0.o)
- .debug_abbrev  0x000130a8       0x26 /opt/devkitpro/libogc/lib/cube/libogc.a(early_init.o)
- .debug_abbrev  0x000130ce       0x98 /opt/devkitpro/libogc/lib/cube/libogc.a(default_stacks.o)
- .debug_abbrev  0x00013166      0x198 /opt/devkitpro/libogc/lib/cube/libogc.a(cache.o)
- .debug_abbrev  0x000132fe      0x42b /opt/devkitpro/libogc/lib/cube/libogc.a(exception.o)
- .debug_abbrev  0x00013729       0x26 /opt/devkitpro/libogc/lib/cube/libogc.a(exception_asm.o)
- .debug_abbrev  0x0001374f      0x330 /opt/devkitpro/libogc/lib/cube/libogc.a(interrupt.o)
- .debug_abbrev  0x00013a7f       0x26 /opt/devkitpro/libogc/lib/cube/libogc.a(interrupt_asm.o)
- .debug_abbrev  0x00013aa5      0x5e4 /opt/devkitpro/libogc/lib/cube/libogc.a(thread.o)
- .debug_abbrev  0x00014089      0x4e4 /opt/devkitpro/libogc/lib/cube/libogc.a(sync.o)
- .debug_abbrev  0x0001456d      0x2fb /opt/devkitpro/libogc/lib/cube/libogc.a(tick.o)
- .debug_abbrev  0x00014868      0x3bb /opt/devkitpro/libogc/lib/cube/libogc.a(newlib_syscalls.o)
- .debug_abbrev  0x00014c23      0x36a /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_queue.o)
- .debug_abbrev  0x00014f8d      0x3a5 /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_thread.o)
- .debug_abbrev  0x00015332      0x588 /opt/devkitpro/libogc/lib/cube/libogc.a(video.o)
- .debug_abbrev  0x000158ba      0x5b9 /opt/devkitpro/libogc/lib/cube/libogc.a(pad.o)
- .debug_abbrev  0x00015e73      0x8b5 /opt/devkitpro/libogc/lib/cube/libogc.a(system.o)
- .debug_abbrev  0x00016728      0x7eb /opt/devkitpro/libogc/lib/cube/libogc.a(gx.o)
- .debug_abbrev  0x00016f13      0x3f5 /opt/devkitpro/libogc/lib/cube/libogc.a(gu.o)
- .debug_abbrev  0x00017308       0x14 /opt/devkitpro/libogc/lib/cube/libogc.a(gu_psasm.o)
- .debug_abbrev  0x0001731c      0x483 /opt/devkitpro/libogc/lib/cube/libogc.a(audio.o)
- .debug_abbrev  0x0001779f      0x4a1 /opt/devkitpro/libogc/lib/cube/libogc.a(dsp.o)
- .debug_abbrev  0x00017c40      0x65a /opt/devkitpro/libogc/lib/cube/libogc.a(si.o)
- .debug_abbrev  0x0001829a      0x461 /opt/devkitpro/libogc/lib/cube/libogc.a(tpl.o)
- .debug_abbrev  0x000186fb      0x3dd /opt/devkitpro/libogc/lib/cube/libogc.a(timesupp.o)
- .debug_abbrev  0x00018ad8      0x2d7 /opt/devkitpro/libogc/lib/cube/libogc.a(sbrk.o)
- .debug_abbrev  0x00018daf      0x113 /opt/devkitpro/libogc/lib/cube/libogc.a(argv.o)
- .debug_abbrev  0x00018ec2      0x459 /opt/devkitpro/libogc/lib/cube/libogc.a(default_panic.o)
- .debug_abbrev  0x0001931b      0x2ee /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_alarm.o)
- .debug_abbrev  0x00019609      0x6da /opt/devkitpro/libogc/lib/cube/libogc.a(console.o)
- .debug_abbrev  0x00019ce3      0x274 /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_wkspace.o)
- .debug_abbrev  0x00019f57      0x214 /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_heap.o)
- .debug_abbrev  0x0001a16b      0x5a4 /opt/devkitpro/libogc/lib/cube/libogc.a(exi.o)
- .debug_abbrev  0x0001a70f       0x14 /opt/devkitpro/libogc/lib/cube/libogc.a(cache_asm.o)
- .debug_abbrev  0x0001a723       0x46 /opt/devkitpro/libogc/lib/cube/libogc.a(console_font_8x16.o)
- .debug_abbrev  0x0001a769      0x461 /opt/devkitpro/libogc/lib/cube/libogc.a(usbgecko.o)
- .debug_abbrev  0x0001abca      0x487 /opt/devkitpro/libogc/lib/cube/libogc.a(kprintf.o)
- .debug_abbrev  0x0001b051      0x1fd /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_queue.o)
- .debug_abbrev  0x0001b24e       0x83 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_floatundisf.o)
- .debug_abbrev  0x0001b2d1      0x19b /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_divdi3.o)
- .debug_abbrev  0x0001b46c      0x17f /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_udivdi3.o)
- .debug_abbrev  0x0001b5eb      0x1a0 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_umoddi3.o)
- .debug_abbrev  0x0001b78b      0x873 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2.o)
- .debug_abbrev  0x0001bffe      0x70e /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2-fde.o)
- .debug_abbrev  0x0001c70c       0x28 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(crtresxgpr.o)
+ .debug_abbrev  0x0000dd3e     0x14f6 drawing.o
+ .debug_abbrev  0x0000f234       0xb2 filesystem.o
+ .debug_abbrev  0x0000f2e6      0xff8 input.o
+ .debug_abbrev  0x000102de     0x11e4 misc.o
+ .debug_abbrev  0x000114c2     0x1273 customfuncs.o
+ .debug_abbrev  0x00012735      0x40f oggplayer.o
+ .debug_abbrev  0x00012b44      0x52b /opt/devkitpro/libogc/lib/cube/libasnd.a(asndlib.o)
+ .debug_abbrev  0x0001306f       0x26 /opt/devkitpro/libogc/lib/cube/libogc.a(common_crt0.o)
+ .debug_abbrev  0x00013095       0x26 /opt/devkitpro/libogc/lib/cube/libogc.a(early_init.o)
+ .debug_abbrev  0x000130bb       0x98 /opt/devkitpro/libogc/lib/cube/libogc.a(default_stacks.o)
+ .debug_abbrev  0x00013153      0x198 /opt/devkitpro/libogc/lib/cube/libogc.a(cache.o)
+ .debug_abbrev  0x000132eb      0x42b /opt/devkitpro/libogc/lib/cube/libogc.a(exception.o)
+ .debug_abbrev  0x00013716       0x26 /opt/devkitpro/libogc/lib/cube/libogc.a(exception_asm.o)
+ .debug_abbrev  0x0001373c      0x330 /opt/devkitpro/libogc/lib/cube/libogc.a(interrupt.o)
+ .debug_abbrev  0x00013a6c       0x26 /opt/devkitpro/libogc/lib/cube/libogc.a(interrupt_asm.o)
+ .debug_abbrev  0x00013a92      0x5e4 /opt/devkitpro/libogc/lib/cube/libogc.a(thread.o)
+ .debug_abbrev  0x00014076      0x4e4 /opt/devkitpro/libogc/lib/cube/libogc.a(sync.o)
+ .debug_abbrev  0x0001455a      0x2fb /opt/devkitpro/libogc/lib/cube/libogc.a(tick.o)
+ .debug_abbrev  0x00014855      0x3bb /opt/devkitpro/libogc/lib/cube/libogc.a(newlib_syscalls.o)
+ .debug_abbrev  0x00014c10      0x36a /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_queue.o)
+ .debug_abbrev  0x00014f7a      0x3a5 /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_thread.o)
+ .debug_abbrev  0x0001531f      0x588 /opt/devkitpro/libogc/lib/cube/libogc.a(video.o)
+ .debug_abbrev  0x000158a7      0x5b9 /opt/devkitpro/libogc/lib/cube/libogc.a(pad.o)
+ .debug_abbrev  0x00015e60      0x8b5 /opt/devkitpro/libogc/lib/cube/libogc.a(system.o)
+ .debug_abbrev  0x00016715      0x7eb /opt/devkitpro/libogc/lib/cube/libogc.a(gx.o)
+ .debug_abbrev  0x00016f00      0x3f5 /opt/devkitpro/libogc/lib/cube/libogc.a(gu.o)
+ .debug_abbrev  0x000172f5       0x14 /opt/devkitpro/libogc/lib/cube/libogc.a(gu_psasm.o)
+ .debug_abbrev  0x00017309      0x483 /opt/devkitpro/libogc/lib/cube/libogc.a(audio.o)
+ .debug_abbrev  0x0001778c      0x4a1 /opt/devkitpro/libogc/lib/cube/libogc.a(dsp.o)
+ .debug_abbrev  0x00017c2d      0x65a /opt/devkitpro/libogc/lib/cube/libogc.a(si.o)
+ .debug_abbrev  0x00018287      0x461 /opt/devkitpro/libogc/lib/cube/libogc.a(tpl.o)
+ .debug_abbrev  0x000186e8      0x3dd /opt/devkitpro/libogc/lib/cube/libogc.a(timesupp.o)
+ .debug_abbrev  0x00018ac5      0x2d7 /opt/devkitpro/libogc/lib/cube/libogc.a(sbrk.o)
+ .debug_abbrev  0x00018d9c      0x113 /opt/devkitpro/libogc/lib/cube/libogc.a(argv.o)
+ .debug_abbrev  0x00018eaf      0x459 /opt/devkitpro/libogc/lib/cube/libogc.a(default_panic.o)
+ .debug_abbrev  0x00019308      0x2ee /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_alarm.o)
+ .debug_abbrev  0x000195f6      0x6da /opt/devkitpro/libogc/lib/cube/libogc.a(console.o)
+ .debug_abbrev  0x00019cd0      0x274 /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_wkspace.o)
+ .debug_abbrev  0x00019f44      0x214 /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_heap.o)
+ .debug_abbrev  0x0001a158      0x5a4 /opt/devkitpro/libogc/lib/cube/libogc.a(exi.o)
+ .debug_abbrev  0x0001a6fc       0x14 /opt/devkitpro/libogc/lib/cube/libogc.a(cache_asm.o)
+ .debug_abbrev  0x0001a710       0x46 /opt/devkitpro/libogc/lib/cube/libogc.a(console_font_8x16.o)
+ .debug_abbrev  0x0001a756      0x461 /opt/devkitpro/libogc/lib/cube/libogc.a(usbgecko.o)
+ .debug_abbrev  0x0001abb7      0x487 /opt/devkitpro/libogc/lib/cube/libogc.a(kprintf.o)
+ .debug_abbrev  0x0001b03e      0x1fd /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_queue.o)
+ .debug_abbrev  0x0001b23b       0x83 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_floatundisf.o)
+ .debug_abbrev  0x0001b2be      0x19b /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_divdi3.o)
+ .debug_abbrev  0x0001b459      0x17f /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_udivdi3.o)
+ .debug_abbrev  0x0001b5d8      0x1a0 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_umoddi3.o)
+ .debug_abbrev  0x0001b778      0x873 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2.o)
+ .debug_abbrev  0x0001bfeb      0x70e /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2-fde.o)
+ .debug_abbrev  0x0001c6f9       0x28 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(crtresxgpr.o)
 
-.debug_line     0x00000000    0xd3d77
+.debug_line     0x00000000    0xd3d9a
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x1b8 include_audio.o
  .debug_line    0x000001b8     0x37dd main.o
@@ -17382,58 +17382,58 @@ Linker script and memory map
  .debug_line    0x0004e73d     0xc2cf orpgWall.o
  .debug_line    0x0005aa0c     0x3789 audio.o
  .debug_line    0x0005e195     0xf5b0 collision.o
- .debug_line    0x0006d745     0xab99 drawing.o
- .debug_line    0x000782de       0xc3 filesystem.o
- .debug_line    0x000783a1     0x386d input.o
- .debug_line    0x0007bc0e     0x72e2 misc.o
- .debug_line    0x00082ef0    0x1554d customfuncs.o
- .debug_line    0x0009843d      0xd06 oggplayer.o
- .debug_line    0x00099143     0x28d9 /opt/devkitpro/libogc/lib/cube/libasnd.a(asndlib.o)
- .debug_line    0x0009ba1c       0x8b /opt/devkitpro/libogc/lib/cube/libogc.a(common_crt0.o)
- .debug_line    0x0009baa7       0xc6 /opt/devkitpro/libogc/lib/cube/libogc.a(early_init.o)
- .debug_line    0x0009bb6d      0x16e /opt/devkitpro/libogc/lib/cube/libogc.a(default_stacks.o)
- .debug_line    0x0009bcdb      0x4a2 /opt/devkitpro/libogc/lib/cube/libogc.a(cache.o)
- .debug_line    0x0009c17d      0x4cc /opt/devkitpro/libogc/lib/cube/libogc.a(exception.o)
- .debug_line    0x0009c649      0x198 /opt/devkitpro/libogc/lib/cube/libogc.a(exception_asm.o)
- .debug_line    0x0009c7e1      0xfdc /opt/devkitpro/libogc/lib/cube/libogc.a(interrupt.o)
- .debug_line    0x0009d7bd       0xb7 /opt/devkitpro/libogc/lib/cube/libogc.a(interrupt_asm.o)
- .debug_line    0x0009d874     0x1c1c /opt/devkitpro/libogc/lib/cube/libogc.a(thread.o)
- .debug_line    0x0009f490      0xf46 /opt/devkitpro/libogc/lib/cube/libogc.a(sync.o)
- .debug_line    0x000a03d6      0x8d9 /opt/devkitpro/libogc/lib/cube/libogc.a(tick.o)
- .debug_line    0x000a0caf      0x71a /opt/devkitpro/libogc/lib/cube/libogc.a(newlib_syscalls.o)
- .debug_line    0x000a13c9      0x5bd /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_queue.o)
- .debug_line    0x000a1986      0x62c /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_thread.o)
- .debug_line    0x000a1fb2     0x24c5 /opt/devkitpro/libogc/lib/cube/libogc.a(video.o)
- .debug_line    0x000a4477     0x1e02 /opt/devkitpro/libogc/lib/cube/libogc.a(pad.o)
- .debug_line    0x000a6279     0x55f6 /opt/devkitpro/libogc/lib/cube/libogc.a(system.o)
- .debug_line    0x000ab86f     0xb54b /opt/devkitpro/libogc/lib/cube/libogc.a(gx.o)
- .debug_line    0x000b6dba     0x27d8 /opt/devkitpro/libogc/lib/cube/libogc.a(gu.o)
- .debug_line    0x000b9592      0x27f /opt/devkitpro/libogc/lib/cube/libogc.a(gu_psasm.o)
- .debug_line    0x000b9811      0xf1d /opt/devkitpro/libogc/lib/cube/libogc.a(audio.o)
- .debug_line    0x000ba72e     0x1ae9 /opt/devkitpro/libogc/lib/cube/libogc.a(dsp.o)
- .debug_line    0x000bc217     0x2501 /opt/devkitpro/libogc/lib/cube/libogc.a(si.o)
- .debug_line    0x000be718      0xe13 /opt/devkitpro/libogc/lib/cube/libogc.a(tpl.o)
- .debug_line    0x000bf52b      0x84b /opt/devkitpro/libogc/lib/cube/libogc.a(timesupp.o)
- .debug_line    0x000bfd76      0x432 /opt/devkitpro/libogc/lib/cube/libogc.a(sbrk.o)
- .debug_line    0x000c01a8      0x25e /opt/devkitpro/libogc/lib/cube/libogc.a(argv.o)
- .debug_line    0x000c0406      0x61f /opt/devkitpro/libogc/lib/cube/libogc.a(default_panic.o)
- .debug_line    0x000c0a25      0x8ea /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_alarm.o)
- .debug_line    0x000c130f     0x2d2a /opt/devkitpro/libogc/lib/cube/libogc.a(console.o)
- .debug_line    0x000c4039      0x3fc /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_wkspace.o)
- .debug_line    0x000c4435      0xc0e /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_heap.o)
- .debug_line    0x000c5043     0x34ca /opt/devkitpro/libogc/lib/cube/libogc.a(exi.o)
- .debug_line    0x000c850d      0x113 /opt/devkitpro/libogc/lib/cube/libogc.a(cache_asm.o)
- .debug_line    0x000c8620       0x82 /opt/devkitpro/libogc/lib/cube/libogc.a(console_font_8x16.o)
- .debug_line    0x000c86a2     0x22b1 /opt/devkitpro/libogc/lib/cube/libogc.a(usbgecko.o)
- .debug_line    0x000ca953      0xfc5 /opt/devkitpro/libogc/lib/cube/libogc.a(kprintf.o)
- .debug_line    0x000cb918      0x730 /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_queue.o)
- .debug_line    0x000cc048      0x103 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_floatundisf.o)
- .debug_line    0x000cc14b      0x65f /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_divdi3.o)
- .debug_line    0x000cc7aa      0x5f8 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_udivdi3.o)
- .debug_line    0x000ccda2      0x587 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_umoddi3.o)
- .debug_line    0x000cd329     0x43b1 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2.o)
- .debug_line    0x000d16da     0x263f /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2-fde.o)
- .debug_line    0x000d3d19       0x5e /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(crtresxgpr.o)
+ .debug_line    0x0006d745     0xabbc drawing.o
+ .debug_line    0x00078301       0xc3 filesystem.o
+ .debug_line    0x000783c4     0x386d input.o
+ .debug_line    0x0007bc31     0x72e2 misc.o
+ .debug_line    0x00082f13    0x1554d customfuncs.o
+ .debug_line    0x00098460      0xd06 oggplayer.o
+ .debug_line    0x00099166     0x28d9 /opt/devkitpro/libogc/lib/cube/libasnd.a(asndlib.o)
+ .debug_line    0x0009ba3f       0x8b /opt/devkitpro/libogc/lib/cube/libogc.a(common_crt0.o)
+ .debug_line    0x0009baca       0xc6 /opt/devkitpro/libogc/lib/cube/libogc.a(early_init.o)
+ .debug_line    0x0009bb90      0x16e /opt/devkitpro/libogc/lib/cube/libogc.a(default_stacks.o)
+ .debug_line    0x0009bcfe      0x4a2 /opt/devkitpro/libogc/lib/cube/libogc.a(cache.o)
+ .debug_line    0x0009c1a0      0x4cc /opt/devkitpro/libogc/lib/cube/libogc.a(exception.o)
+ .debug_line    0x0009c66c      0x198 /opt/devkitpro/libogc/lib/cube/libogc.a(exception_asm.o)
+ .debug_line    0x0009c804      0xfdc /opt/devkitpro/libogc/lib/cube/libogc.a(interrupt.o)
+ .debug_line    0x0009d7e0       0xb7 /opt/devkitpro/libogc/lib/cube/libogc.a(interrupt_asm.o)
+ .debug_line    0x0009d897     0x1c1c /opt/devkitpro/libogc/lib/cube/libogc.a(thread.o)
+ .debug_line    0x0009f4b3      0xf46 /opt/devkitpro/libogc/lib/cube/libogc.a(sync.o)
+ .debug_line    0x000a03f9      0x8d9 /opt/devkitpro/libogc/lib/cube/libogc.a(tick.o)
+ .debug_line    0x000a0cd2      0x71a /opt/devkitpro/libogc/lib/cube/libogc.a(newlib_syscalls.o)
+ .debug_line    0x000a13ec      0x5bd /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_queue.o)
+ .debug_line    0x000a19a9      0x62c /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_thread.o)
+ .debug_line    0x000a1fd5     0x24c5 /opt/devkitpro/libogc/lib/cube/libogc.a(video.o)
+ .debug_line    0x000a449a     0x1e02 /opt/devkitpro/libogc/lib/cube/libogc.a(pad.o)
+ .debug_line    0x000a629c     0x55f6 /opt/devkitpro/libogc/lib/cube/libogc.a(system.o)
+ .debug_line    0x000ab892     0xb54b /opt/devkitpro/libogc/lib/cube/libogc.a(gx.o)
+ .debug_line    0x000b6ddd     0x27d8 /opt/devkitpro/libogc/lib/cube/libogc.a(gu.o)
+ .debug_line    0x000b95b5      0x27f /opt/devkitpro/libogc/lib/cube/libogc.a(gu_psasm.o)
+ .debug_line    0x000b9834      0xf1d /opt/devkitpro/libogc/lib/cube/libogc.a(audio.o)
+ .debug_line    0x000ba751     0x1ae9 /opt/devkitpro/libogc/lib/cube/libogc.a(dsp.o)
+ .debug_line    0x000bc23a     0x2501 /opt/devkitpro/libogc/lib/cube/libogc.a(si.o)
+ .debug_line    0x000be73b      0xe13 /opt/devkitpro/libogc/lib/cube/libogc.a(tpl.o)
+ .debug_line    0x000bf54e      0x84b /opt/devkitpro/libogc/lib/cube/libogc.a(timesupp.o)
+ .debug_line    0x000bfd99      0x432 /opt/devkitpro/libogc/lib/cube/libogc.a(sbrk.o)
+ .debug_line    0x000c01cb      0x25e /opt/devkitpro/libogc/lib/cube/libogc.a(argv.o)
+ .debug_line    0x000c0429      0x61f /opt/devkitpro/libogc/lib/cube/libogc.a(default_panic.o)
+ .debug_line    0x000c0a48      0x8ea /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_alarm.o)
+ .debug_line    0x000c1332     0x2d2a /opt/devkitpro/libogc/lib/cube/libogc.a(console.o)
+ .debug_line    0x000c405c      0x3fc /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_wkspace.o)
+ .debug_line    0x000c4458      0xc0e /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_heap.o)
+ .debug_line    0x000c5066     0x34ca /opt/devkitpro/libogc/lib/cube/libogc.a(exi.o)
+ .debug_line    0x000c8530      0x113 /opt/devkitpro/libogc/lib/cube/libogc.a(cache_asm.o)
+ .debug_line    0x000c8643       0x82 /opt/devkitpro/libogc/lib/cube/libogc.a(console_font_8x16.o)
+ .debug_line    0x000c86c5     0x22b1 /opt/devkitpro/libogc/lib/cube/libogc.a(usbgecko.o)
+ .debug_line    0x000ca976      0xfc5 /opt/devkitpro/libogc/lib/cube/libogc.a(kprintf.o)
+ .debug_line    0x000cb93b      0x730 /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_queue.o)
+ .debug_line    0x000cc06b      0x103 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_floatundisf.o)
+ .debug_line    0x000cc16e      0x65f /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_divdi3.o)
+ .debug_line    0x000cc7cd      0x5f8 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_udivdi3.o)
+ .debug_line    0x000ccdc5      0x587 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_umoddi3.o)
+ .debug_line    0x000cd34c     0x43b1 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2.o)
+ .debug_line    0x000d16fd     0x263f /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2-fde.o)
+ .debug_line    0x000d3d3c       0x5e /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(crtresxgpr.o)
 
 .debug_frame    0x00000000      0x120
  *(.debug_frame)
@@ -17636,7 +17636,7 @@ Linker script and memory map
                                  0xca (size before relaxing)
 
 .debug_loclists
-                0x00000000   0x25f4c4
+                0x00000000   0x25f56c
  *(.debug_loclists)
  .debug_loclists
                 0x00000000     0xb22f main.o
@@ -17665,89 +17665,89 @@ Linker script and memory map
  .debug_loclists
                 0x00155485    0x366f2 collision.o
  .debug_loclists
-                0x0018bb77    0x277b5 drawing.o
+                0x0018bb77    0x2785d drawing.o
  .debug_loclists
-                0x001b332c     0xb50d input.o
+                0x001b33d4     0xb50d input.o
  .debug_loclists
-                0x001be839    0x1ebfc misc.o
+                0x001be8e1    0x1ebfc misc.o
  .debug_loclists
-                0x001dd435    0x4fc4c customfuncs.o
+                0x001dd4dd    0x4fc4c customfuncs.o
  .debug_loclists
-                0x0022d081      0x77a oggplayer.o
+                0x0022d129      0x77a oggplayer.o
  .debug_loclists
-                0x0022d7fb     0x1a00 /opt/devkitpro/libogc/lib/cube/libasnd.a(asndlib.o)
+                0x0022d8a3     0x1a00 /opt/devkitpro/libogc/lib/cube/libasnd.a(asndlib.o)
  .debug_loclists
-                0x0022f1fb      0x3e4 /opt/devkitpro/libogc/lib/cube/libogc.a(cache.o)
+                0x0022f2a3      0x3e4 /opt/devkitpro/libogc/lib/cube/libogc.a(cache.o)
  .debug_loclists
-                0x0022f5df       0xe0 /opt/devkitpro/libogc/lib/cube/libogc.a(exception.o)
+                0x0022f687       0xe0 /opt/devkitpro/libogc/lib/cube/libogc.a(exception.o)
  .debug_loclists
-                0x0022f6bf      0xb14 /opt/devkitpro/libogc/lib/cube/libogc.a(interrupt.o)
+                0x0022f767      0xb14 /opt/devkitpro/libogc/lib/cube/libogc.a(interrupt.o)
  .debug_loclists
-                0x002301d3     0x170c /opt/devkitpro/libogc/lib/cube/libogc.a(thread.o)
+                0x0023027b     0x170c /opt/devkitpro/libogc/lib/cube/libogc.a(thread.o)
  .debug_loclists
-                0x002318df      0xa71 /opt/devkitpro/libogc/lib/cube/libogc.a(sync.o)
+                0x00231987      0xa71 /opt/devkitpro/libogc/lib/cube/libogc.a(sync.o)
  .debug_loclists
-                0x00232350      0x57b /opt/devkitpro/libogc/lib/cube/libogc.a(tick.o)
+                0x002323f8      0x57b /opt/devkitpro/libogc/lib/cube/libogc.a(tick.o)
  .debug_loclists
-                0x002328cb      0x83e /opt/devkitpro/libogc/lib/cube/libogc.a(newlib_syscalls.o)
+                0x00232973      0x83e /opt/devkitpro/libogc/lib/cube/libogc.a(newlib_syscalls.o)
  .debug_loclists
-                0x00233109      0x2c4 /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_queue.o)
+                0x002331b1      0x2c4 /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_queue.o)
  .debug_loclists
-                0x002333cd      0x4e8 /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_thread.o)
+                0x00233475      0x4e8 /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_thread.o)
  .debug_loclists
-                0x002338b5     0x1b8f /opt/devkitpro/libogc/lib/cube/libogc.a(video.o)
+                0x0023395d     0x1b8f /opt/devkitpro/libogc/lib/cube/libogc.a(video.o)
  .debug_loclists
-                0x00235444     0x13e0 /opt/devkitpro/libogc/lib/cube/libogc.a(pad.o)
+                0x002354ec     0x13e0 /opt/devkitpro/libogc/lib/cube/libogc.a(pad.o)
  .debug_loclists
-                0x00236824     0x4344 /opt/devkitpro/libogc/lib/cube/libogc.a(system.o)
+                0x002368cc     0x4344 /opt/devkitpro/libogc/lib/cube/libogc.a(system.o)
  .debug_loclists
-                0x0023ab68     0xa790 /opt/devkitpro/libogc/lib/cube/libogc.a(gx.o)
+                0x0023ac10     0xa790 /opt/devkitpro/libogc/lib/cube/libogc.a(gx.o)
  .debug_loclists
-                0x002452f8      0xeb1 /opt/devkitpro/libogc/lib/cube/libogc.a(gu.o)
+                0x002453a0      0xeb1 /opt/devkitpro/libogc/lib/cube/libogc.a(gu.o)
  .debug_loclists
-                0x002461a9      0x676 /opt/devkitpro/libogc/lib/cube/libogc.a(audio.o)
+                0x00246251      0x676 /opt/devkitpro/libogc/lib/cube/libogc.a(audio.o)
  .debug_loclists
-                0x0024681f      0x894 /opt/devkitpro/libogc/lib/cube/libogc.a(dsp.o)
+                0x002468c7      0x894 /opt/devkitpro/libogc/lib/cube/libogc.a(dsp.o)
  .debug_loclists
-                0x002470b3     0x1c5b /opt/devkitpro/libogc/lib/cube/libogc.a(si.o)
+                0x0024715b     0x1c5b /opt/devkitpro/libogc/lib/cube/libogc.a(si.o)
  .debug_loclists
-                0x00248d0e      0xf26 /opt/devkitpro/libogc/lib/cube/libogc.a(tpl.o)
+                0x00248db6      0xf26 /opt/devkitpro/libogc/lib/cube/libogc.a(tpl.o)
  .debug_loclists
-                0x00249c34      0x4c8 /opt/devkitpro/libogc/lib/cube/libogc.a(timesupp.o)
+                0x00249cdc      0x4c8 /opt/devkitpro/libogc/lib/cube/libogc.a(timesupp.o)
  .debug_loclists
-                0x0024a0fc      0x185 /opt/devkitpro/libogc/lib/cube/libogc.a(sbrk.o)
+                0x0024a1a4      0x185 /opt/devkitpro/libogc/lib/cube/libogc.a(sbrk.o)
  .debug_loclists
-                0x0024a281       0x17 /opt/devkitpro/libogc/lib/cube/libogc.a(argv.o)
+                0x0024a329       0x17 /opt/devkitpro/libogc/lib/cube/libogc.a(argv.o)
  .debug_loclists
-                0x0024a298      0x223 /opt/devkitpro/libogc/lib/cube/libogc.a(default_panic.o)
+                0x0024a340      0x223 /opt/devkitpro/libogc/lib/cube/libogc.a(default_panic.o)
  .debug_loclists
-                0x0024a4bb      0x7cf /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_alarm.o)
+                0x0024a563      0x7cf /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_alarm.o)
  .debug_loclists
-                0x0024ac8a     0x2aeb /opt/devkitpro/libogc/lib/cube/libogc.a(console.o)
+                0x0024ad32     0x2aeb /opt/devkitpro/libogc/lib/cube/libogc.a(console.o)
  .debug_loclists
-                0x0024d775       0xba /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_wkspace.o)
+                0x0024d81d       0xba /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_wkspace.o)
  .debug_loclists
-                0x0024d82f      0x804 /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_heap.o)
+                0x0024d8d7      0x804 /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_heap.o)
  .debug_loclists
-                0x0024e033     0x3dc0 /opt/devkitpro/libogc/lib/cube/libogc.a(exi.o)
+                0x0024e0db     0x3dc0 /opt/devkitpro/libogc/lib/cube/libogc.a(exi.o)
  .debug_loclists
-                0x00251df3     0x2465 /opt/devkitpro/libogc/lib/cube/libogc.a(usbgecko.o)
+                0x00251e9b     0x2465 /opt/devkitpro/libogc/lib/cube/libogc.a(usbgecko.o)
  .debug_loclists
-                0x00254258     0x1056 /opt/devkitpro/libogc/lib/cube/libogc.a(kprintf.o)
+                0x00254300     0x1056 /opt/devkitpro/libogc/lib/cube/libogc.a(kprintf.o)
  .debug_loclists
-                0x002552ae      0x486 /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_queue.o)
+                0x00255356      0x486 /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_queue.o)
  .debug_loclists
-                0x00255734       0x5c /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_floatundisf.o)
+                0x002557dc       0x5c /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_floatundisf.o)
  .debug_loclists
-                0x00255790      0x9c3 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_divdi3.o)
+                0x00255838      0x9c3 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_divdi3.o)
  .debug_loclists
-                0x00256153      0xa6d /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_udivdi3.o)
+                0x002561fb      0xa6d /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_udivdi3.o)
  .debug_loclists
-                0x00256bc0      0x82e /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_umoddi3.o)
+                0x00256c68      0x82e /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_umoddi3.o)
  .debug_loclists
-                0x002573ee     0x571b /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2.o)
+                0x00257496     0x571b /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2.o)
  .debug_loclists
-                0x0025cb09     0x29bb /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2-fde.o)
+                0x0025cbb1     0x29bb /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2-fde.o)
 
 .debug_macro
  *(.debug_macro)
@@ -17756,7 +17756,7 @@ Linker script and memory map
  *(.debug_names)
 
 .debug_rnglists
-                0x00000000    0x64da5
+                0x00000000    0x64d9f
  *(.debug_rnglists)
  .debug_rnglists
                 0x00000000      0x66b main.o
@@ -17785,99 +17785,99 @@ Linker script and memory map
  .debug_rnglists
                 0x0003484a     0xb83c collision.o
  .debug_rnglists
-                0x00040086     0x6fff drawing.o
+                0x00040086     0x6ff9 drawing.o
  .debug_rnglists
-                0x00047085       0x1f filesystem.o
+                0x0004707f       0x1f filesystem.o
  .debug_rnglists
-                0x000470a4      0x6c5 input.o
+                0x0004709e      0x6c5 input.o
  .debug_rnglists
-                0x00047769     0x55f3 misc.o
+                0x00047763     0x55f3 misc.o
  .debug_rnglists
-                0x0004cd5c    0x1089b customfuncs.o
+                0x0004cd56    0x1089b customfuncs.o
  .debug_rnglists
-                0x0005d5f7       0x8d oggplayer.o
+                0x0005d5f1       0x8d oggplayer.o
  .debug_rnglists
-                0x0005d684      0x3e2 /opt/devkitpro/libogc/lib/cube/libasnd.a(asndlib.o)
+                0x0005d67e      0x3e2 /opt/devkitpro/libogc/lib/cube/libasnd.a(asndlib.o)
  .debug_rnglists
-                0x0005da66       0x20 /opt/devkitpro/libogc/lib/cube/libogc.a(common_crt0.o)
+                0x0005da60       0x20 /opt/devkitpro/libogc/lib/cube/libogc.a(common_crt0.o)
  .debug_rnglists
-                0x0005da86       0x20 /opt/devkitpro/libogc/lib/cube/libogc.a(early_init.o)
+                0x0005da80       0x20 /opt/devkitpro/libogc/lib/cube/libogc.a(early_init.o)
  .debug_rnglists
-                0x0005daa6       0x31 /opt/devkitpro/libogc/lib/cube/libogc.a(cache.o)
+                0x0005daa0       0x31 /opt/devkitpro/libogc/lib/cube/libogc.a(cache.o)
  .debug_rnglists
-                0x0005dad7       0x95 /opt/devkitpro/libogc/lib/cube/libogc.a(exception.o)
+                0x0005dad1       0x95 /opt/devkitpro/libogc/lib/cube/libogc.a(exception.o)
  .debug_rnglists
-                0x0005db6c       0x2e /opt/devkitpro/libogc/lib/cube/libogc.a(exception_asm.o)
+                0x0005db66       0x2e /opt/devkitpro/libogc/lib/cube/libogc.a(exception_asm.o)
  .debug_rnglists
-                0x0005db9a      0x2f7 /opt/devkitpro/libogc/lib/cube/libogc.a(interrupt.o)
+                0x0005db94      0x2f7 /opt/devkitpro/libogc/lib/cube/libogc.a(interrupt.o)
  .debug_rnglists
-                0x0005de91       0x20 /opt/devkitpro/libogc/lib/cube/libogc.a(interrupt_asm.o)
+                0x0005de8b       0x20 /opt/devkitpro/libogc/lib/cube/libogc.a(interrupt_asm.o)
  .debug_rnglists
-                0x0005deb1      0x537 /opt/devkitpro/libogc/lib/cube/libogc.a(thread.o)
+                0x0005deab      0x537 /opt/devkitpro/libogc/lib/cube/libogc.a(thread.o)
  .debug_rnglists
-                0x0005e3e8      0x29d /opt/devkitpro/libogc/lib/cube/libogc.a(sync.o)
+                0x0005e3e2      0x29d /opt/devkitpro/libogc/lib/cube/libogc.a(sync.o)
  .debug_rnglists
-                0x0005e685      0x1a9 /opt/devkitpro/libogc/lib/cube/libogc.a(tick.o)
+                0x0005e67f      0x1a9 /opt/devkitpro/libogc/lib/cube/libogc.a(tick.o)
  .debug_rnglists
-                0x0005e82e       0x82 /opt/devkitpro/libogc/lib/cube/libogc.a(newlib_syscalls.o)
+                0x0005e828       0x82 /opt/devkitpro/libogc/lib/cube/libogc.a(newlib_syscalls.o)
  .debug_rnglists
-                0x0005e8b0       0xd6 /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_queue.o)
+                0x0005e8aa       0xd6 /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_queue.o)
  .debug_rnglists
-                0x0005e986       0x5c /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_thread.o)
+                0x0005e980       0x5c /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_thread.o)
  .debug_rnglists
-                0x0005e9e2      0x582 /opt/devkitpro/libogc/lib/cube/libogc.a(video.o)
+                0x0005e9dc      0x582 /opt/devkitpro/libogc/lib/cube/libogc.a(video.o)
  .debug_rnglists
-                0x0005ef64      0x2ec /opt/devkitpro/libogc/lib/cube/libogc.a(pad.o)
+                0x0005ef5e      0x2ec /opt/devkitpro/libogc/lib/cube/libogc.a(pad.o)
  .debug_rnglists
-                0x0005f250      0xdc2 /opt/devkitpro/libogc/lib/cube/libogc.a(system.o)
+                0x0005f24a      0xdc2 /opt/devkitpro/libogc/lib/cube/libogc.a(system.o)
  .debug_rnglists
-                0x00060012     0x1257 /opt/devkitpro/libogc/lib/cube/libogc.a(gx.o)
+                0x0006000c     0x1257 /opt/devkitpro/libogc/lib/cube/libogc.a(gx.o)
  .debug_rnglists
-                0x00061269      0x1c3 /opt/devkitpro/libogc/lib/cube/libogc.a(gu.o)
+                0x00061263      0x1c3 /opt/devkitpro/libogc/lib/cube/libogc.a(gu.o)
  .debug_rnglists
-                0x0006142c      0x1bf /opt/devkitpro/libogc/lib/cube/libogc.a(audio.o)
+                0x00061426      0x1bf /opt/devkitpro/libogc/lib/cube/libogc.a(audio.o)
  .debug_rnglists
-                0x000615eb      0x547 /opt/devkitpro/libogc/lib/cube/libogc.a(dsp.o)
+                0x000615e5      0x547 /opt/devkitpro/libogc/lib/cube/libogc.a(dsp.o)
  .debug_rnglists
-                0x00061b32      0x44e /opt/devkitpro/libogc/lib/cube/libogc.a(si.o)
+                0x00061b2c      0x44e /opt/devkitpro/libogc/lib/cube/libogc.a(si.o)
  .debug_rnglists
-                0x00061f80       0xcd /opt/devkitpro/libogc/lib/cube/libogc.a(tpl.o)
+                0x00061f7a       0xcd /opt/devkitpro/libogc/lib/cube/libogc.a(tpl.o)
  .debug_rnglists
-                0x0006204d       0x99 /opt/devkitpro/libogc/lib/cube/libogc.a(timesupp.o)
+                0x00062047       0x99 /opt/devkitpro/libogc/lib/cube/libogc.a(timesupp.o)
  .debug_rnglists
-                0x000620e6       0x65 /opt/devkitpro/libogc/lib/cube/libogc.a(sbrk.o)
+                0x000620e0       0x65 /opt/devkitpro/libogc/lib/cube/libogc.a(sbrk.o)
  .debug_rnglists
-                0x0006214b       0x14 /opt/devkitpro/libogc/lib/cube/libogc.a(argv.o)
+                0x00062145       0x14 /opt/devkitpro/libogc/lib/cube/libogc.a(argv.o)
  .debug_rnglists
-                0x0006215f       0x7b /opt/devkitpro/libogc/lib/cube/libogc.a(default_panic.o)
+                0x00062159       0x7b /opt/devkitpro/libogc/lib/cube/libogc.a(default_panic.o)
  .debug_rnglists
-                0x000621da      0x15e /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_alarm.o)
+                0x000621d4      0x15e /opt/devkitpro/libogc/lib/cube/libogc.a(lwpc_alarm.o)
  .debug_rnglists
-                0x00062338      0x808 /opt/devkitpro/libogc/lib/cube/libogc.a(console.o)
+                0x00062332      0x808 /opt/devkitpro/libogc/lib/cube/libogc.a(console.o)
  .debug_rnglists
-                0x00062b40       0x56 /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_wkspace.o)
+                0x00062b3a       0x56 /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_wkspace.o)
  .debug_rnglists
-                0x00062b96      0x15e /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_heap.o)
+                0x00062b90      0x15e /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_heap.o)
  .debug_rnglists
-                0x00062cf4      0x7ce /opt/devkitpro/libogc/lib/cube/libogc.a(exi.o)
+                0x00062cee      0x7ce /opt/devkitpro/libogc/lib/cube/libogc.a(exi.o)
  .debug_rnglists
-                0x000634c2      0x4f4 /opt/devkitpro/libogc/lib/cube/libogc.a(usbgecko.o)
+                0x000634bc      0x4f4 /opt/devkitpro/libogc/lib/cube/libogc.a(usbgecko.o)
  .debug_rnglists
-                0x000639b6      0x1be /opt/devkitpro/libogc/lib/cube/libogc.a(kprintf.o)
+                0x000639b0      0x1be /opt/devkitpro/libogc/lib/cube/libogc.a(kprintf.o)
  .debug_rnglists
-                0x00063b74       0xec /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_queue.o)
+                0x00063b6e       0xec /opt/devkitpro/libogc/lib/cube/libogc.a(lwp_queue.o)
  .debug_rnglists
-                0x00063c60       0x13 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_floatundisf.o)
+                0x00063c5a       0x13 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_floatundisf.o)
  .debug_rnglists
-                0x00063c73       0xb6 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_divdi3.o)
+                0x00063c6d       0xb6 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_divdi3.o)
  .debug_rnglists
-                0x00063d29       0xc9 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_udivdi3.o)
+                0x00063d23       0xc9 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_udivdi3.o)
  .debug_rnglists
-                0x00063df2       0xa6 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_umoddi3.o)
+                0x00063dec       0xa6 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(_umoddi3.o)
  .debug_rnglists
-                0x00063e98      0x7ac /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2.o)
+                0x00063e92      0x7ac /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2.o)
  .debug_rnglists
-                0x00064644      0x761 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2-fde.o)
+                0x0006463e      0x761 /opt/devkitpro/devkitPPC/lib/gcc/powerpc-eabi/16.1.0/libgcc.a(unwind-dw2-fde.o)
 
 .debug_str_offsets
  *(.debug_str_offsets)

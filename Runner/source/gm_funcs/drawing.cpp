@@ -283,8 +283,7 @@ unsigned int drawcolor = c_white;
     }
 
     void draw_sprite_part_ext(int draw_sprite, float subimg, float left, float top, float width, float height, float draw_x, float draw_y, float scale_x, float scale_y, float rotation, float color, float alpha){ 
-        GXTexObj localTex;
-        if (TPL_GetTexture(&spriteTPL, draw_sprite-round(subimg), &localTex) != 0)
+        if (!loadTexture(draw_sprite - round(subimg)))
             return;
 
         GX_LoadTexObj(&localTex, GX_TEXMAP0);
