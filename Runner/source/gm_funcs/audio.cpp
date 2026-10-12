@@ -161,3 +161,27 @@ int audio_play_sound_ext(float WHATHOW_I_DONT_KNOW_WHERE_HUHH){
         return soundid;
     }
 #endif
+
+#if defined(raylib) && !defined(dc)
+    #include <raylib.h>
+    int audio_play_sound(int soundid, int priority, bool loop){
+        if (soundid < 0) {
+            printf("Invalid sound ID: %d\n", soundid);
+            return -1;
+        }
+
+        Sound snd = LoadSound(ogg_refs[soundid]);
+
+        if(loop){
+            if (!IsSoundPlaying(snd)) {
+                PlaySound(snd);
+            }
+        } else PlaySound(snd);
+
+        return soundid;
+    }
+#elif defined(raylib) && defined(dc)
+    int audio_play_sound(int soundid, int priority, bool loop){
+        return 0;
+    }
+#endif

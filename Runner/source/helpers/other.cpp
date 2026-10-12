@@ -137,3 +137,18 @@
         StopOgg();
     }
 #endif
+
+#if defined(raylib) && !defined(dc)
+    #include <raylib.h>
+    void ExitApplication()
+    {
+        CloseAudioDevice();
+        CloseWindow();
+    }
+#elif defined(raylib) && defined(dc)
+    #include <raylib.h>
+    void ExitApplication()
+    {
+        CloseWindow();
+    }
+#endif

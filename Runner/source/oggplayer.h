@@ -28,6 +28,8 @@
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#if defined(__gamecube__) || defined(__wii__)
+
 #ifndef __OGGPLAYER_H__
 #define __OGGPLAYER_H__
 
@@ -109,6 +111,8 @@ void SetTimeOgg(s32 time_pos);
 
 #ifdef __cplusplus
 }
+#endif
+
 #endif
 
 #endif

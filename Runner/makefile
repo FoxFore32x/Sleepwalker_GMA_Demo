@@ -1,8 +1,12 @@
-.PHONY: clean 3dsx cia wuhb gamecube GameCube Gamecube NGC GCN wii Wii WII
+.PHONY: clean 3dsx cia Dreamcast dreamcast DC dc wuhb gamecube GameCube Gamecube NGC GCN wii Wii WII
 
 #3DS
 3dsx cia:
 	$(MAKE) -f platform/3ds/makefile $@
+
+#Dreamcast
+Dreamcast dreamcast DC dc:
+	$(MAKE) -f platform/dreamcast/makefile
 
 #Gamecube
 gamecube GameCube Gamecube NGC GCN:
@@ -13,6 +17,7 @@ wii Wii WII:
 	$(MAKE) -f platform/wii/makefile
 
 clean:
+	$(MAKE) -f platform/dreamcast/makefile clean
 	$(MAKE) -f platform/3ds/makefile clean
 	$(MAKE) -f platform/wiiu/makefile clean
 	$(MAKE) -f platform/gamecube/makefile clean

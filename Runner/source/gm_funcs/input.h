@@ -71,6 +71,32 @@
     bool gamepad_button_check_released(int pad, u32 Button);
 #endif
 
+//Raylib
+#if defined(raylib)
+    #include <raylib.h>
+    #define gp_start GAMEPAD_BUTTON_MIDDLE_RIGHT
+    #define gp_select GAMEPAD_BUTTON_MIDDLE_LEFT
+    #define gp_face1 GAMEPAD_BUTTON_RIGHT_FACE_DOWN
+    #define gp_face2 GAMEPAD_BUTTON_RIGHT_FACE_RIGHT
+    #define gp_face3 GAMEPAD_BUTTON_RIGHT_FACE_LEFT
+    #define gp_face4 GAMEPAD_BUTTON_RIGHT_FACE_UP
+    #define gp_padl GAMEPAD_BUTTON_LEFT_FACE_LEFT
+    #define gp_padr GAMEPAD_BUTTON_LEFT_FACE_RIGHT
+    #define gp_padu GAMEPAD_BUTTON_LEFT_FACE_UP
+    #define gp_padd GAMEPAD_BUTTON_LEFT_FACE_DOWN
+    #define gp_shoulderrb GAMEPAD_BUTTON_RIGHT_TRIGGER_1
+    #define gp_shoulderlb GAMEPAD_BUTTON_LEFT_TRIGGER_1
+    #define gp_shoulderr GAMEPAD_BUTTON_RIGHT_TRIGGER_2
+    #define gp_shoulderl GAMEPAD_BUTTON_LEFT_TRIGGER_2
+    #define gp_select gp_shoulderr
+    #define gp_axislh GAMEPAD_AXIS_LEFT_X
+    #define gp_axislv GAMEPAD_AXIS_LEFT_Y
+
+    bool gamepad_button_check(int pad, int Button);
+    bool gamepad_button_check_pressed(int pad, int Button);
+    bool gamepad_button_check_released(int pad, int Button);
+#endif
+
 #pragma region //Keyboard (may need to be changed if some random platform uses a keyboard lol)
     bool keyboard_check(int key);
     bool keyboard_check_pressed(int key);

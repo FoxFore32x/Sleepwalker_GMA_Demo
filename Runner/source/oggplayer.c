@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2008 Francisco Muñoz 'Hermes' <www.elotrolado.net>
+ Copyright (c) 2008 Francisco Muï¿½oz 'Hermes' <www.elotrolado.net>
  All rights reserved.
  
  Proper (standard) vorbis usage by Tantric, 2009
@@ -27,6 +27,8 @@
  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+
+#if defined(__gamecube__) || defined(__wii__)
 
 #include <asndlib.h>
 #include <tremor/ivorbiscodec.h>
@@ -536,3 +538,5 @@ void SetTimeOgg(s32 time_pos)
 	if (time_pos >= 0)
 		private_ogg.seek_time = time_pos;
 }
+
+#endif

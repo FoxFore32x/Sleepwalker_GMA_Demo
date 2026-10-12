@@ -313,6 +313,80 @@ float gamepad_button_deadzone_0 = 0.5;
 
 #endif
 
+#ifdef raylib
+    #include <raylib.h>
+    
+    void gamepad_scanner(){
+    }
+
+    #pragma region //gamepad_ funcs
+    //controller button held
+    bool gamepad_button_check(int pad, int Button){
+        return IsGamepadButtonDown(pad, Button);
+    }
+
+    bool gamepad_button_check_pressed(int pad, int Button){
+        return IsGamepadButtonPressed(pad, Button);
+    }
+
+    bool gamepad_button_check_released(int pad, int Button){
+        return IsGamepadButtonReleased(pad, Button);
+    }
+
+    void gamepad_set_vibration(int pad, int left_motor, int right_motor){
+        SetGamepadVibration(pad, left_motor, right_motor, 2);
+    }
+    
+    int gamepad_get_device_count(){
+        int gamepad = 0;
+        while(IsGamepadAvailable(gamepad)) gamepad++;
+        return gamepad;
+    }
+
+    bool gamepad_is_connected(int pad){
+        return IsGamepadAvailable(pad);
+    }
+
+    bool gamepad_is_supported(){
+        return true;
+    }
+
+    const char* gamepad_get_description(int pad){
+        return GetGamepadName(pad);
+    }
+
+    //analog buttons
+    float gamepad_button_value(int pad, int button){
+        if (gamepad_button_check(pad, button))
+            return 1;
+        else
+            return 0;
+    }
+
+    float gamepad_axis_count(int pad){
+        return 0;
+    }
+
+    float gamepad_axis_value(int pad, int axis){
+        float value = 0;
+
+        /*if (axis == gp_axislh)
+            value = GetGamepadAxisMovement(pad, gp_axislh);
+        else if (axis == gp_axislv)
+            value = GetGamepadAxisMovement(pad, gp_axislv);*/
+
+        value = GetGamepadAxisMovement(pad, axis);
+
+        if (value > -gamepad_button_deadzone_0 && value < gamepad_button_deadzone_0)
+            return 0;
+
+        return value;
+    }
+
+
+    #pragma endregion
+#endif
+
 #pragma region //keyboard funcs (may need to be changed if a platform uses a keyboard)
 bool keyboard_check(int key){
     return false;

@@ -7,6 +7,7 @@
 //all the info is written in the compiler
 
 //sprite info
+extern const char* SpriteFilenames[];
 extern int SpriteWidths[];
 extern int SpriteHeights[];
 extern int SpriteOriginX[];

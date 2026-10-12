@@ -324,6 +324,139 @@ unsigned int drawcolor = c_white;
     }
 #endif
 
+//3ds
+#ifdef raylib
+    #include <raylib.h>
+    #include <raymath.h>
+
+    void drawing_init(){
+    }
+
+    void scr_startframe(){
+        ClearBackground(GetColor(bgcolor));
+
+        Matrix perspective = MatrixOrtho(view_camera[0].camXPos, view_camera[0].camXPos + view_camera[0].camWidth, view_camera[0].camYPos, view_camera[0].camYPos + view_camera[0].camHeight, 0.0, 300.0);
+    }
+
+    void scr_endframe(){
+        EndDrawing();
+    }
+
+    //color and alpha are stubs!
+    //Also rotation is a little weird idk how to fix it
+    static Texture2D localTex = {0};
+    static int loadedTexID = -1;
+
+    bool loadTexture(int texID)
+    {
+        #undef id
+        if (loadedTexID == texID && localTex.id != 0)
+            return true;
+
+        if (localTex.id != 0)
+            UnloadTexture(localTex);
+
+        localTex = LoadTexture(
+            TextFormat("/rd/gfx/%s", SpriteFilenames[texID])
+        );
+
+        if (localTex.id == 0)
+        {
+            loadedTexID = -1;
+            return false;
+        }
+
+        loadedTexID = texID;
+        return true;
+    }
+
+    void unloadSprite(){
+        UnloadTexture(localTex);
+    }
+
+    void draw_sprite(int draw_sprite, float subimg, float draw_x, float draw_y){
+        draw_sprite_ext(draw_sprite, subimg, draw_x, draw_y, 1, 1, 0, c_white, 1);
+    }
+    
+    void draw_sprite_ext(int draw_sprite, float subimg, float draw_x, float draw_y, float scale_x, float scale_y, float rotation, float color, float alpha){
+        if (!loadTexture(draw_sprite - round(subimg)))
+            return;
+
+        int realsprite_width = sprite_get_width(draw_sprite)*scale_x;
+        int realsprite_height = sprite_get_height(draw_sprite)*scale_y;
+
+        DrawTexturePro(
+            localTex,
+            (Rectangle){0, 0, sprite_get_width(draw_sprite), sprite_get_height(draw_sprite)},
+            (Rectangle){draw_x, draw_y, realsprite_width, realsprite_height},
+            (Vector2){sprite_get_xoffset(draw_sprite)*scale_x, sprite_get_yoffset(draw_sprite)*scale_y},
+            rotation,
+            GetColor((int)color)
+        );
+    }
+
+    void draw_sprite_part(int draw_sprite, float subimg, float left, float top, float width, float height, float draw_x, float draw_y){
+        if (!loadTexture(draw_sprite - round(subimg)))
+            return;
+
+        int spriteWidth  = sprite_get_width(draw_sprite);
+        int spriteHeight = sprite_get_height(draw_sprite);
+
+        float u1 = left / spriteWidth;
+        float v1 = top / spriteHeight;
+        float u2 = (left + width) / spriteWidth;
+        float v2 = (top + height) / spriteHeight;
+
+        float x1 = draw_x - sprite_get_xoffset(draw_sprite);
+        float y1 = draw_y - sprite_get_yoffset(draw_sprite);
+
+        float x2 = x1 + width;
+        float y2 = y1 + height;
+
+        DrawTexturePro(
+            localTex,
+            (Rectangle){left, top, width, height},
+            (Rectangle){x1, y1, width, height},
+            (Vector2){0, 0},
+            0.0f,
+            WHITE
+        );
+    }
+
+    void draw_sprite_part_ext(int draw_sprite, float subimg, float left, float top, float width, float height, float draw_x, float draw_y, float scale_x, float scale_y, float rotation, float color, float alpha){ 
+        if (!loadTexture(draw_sprite - round(subimg)))
+            return;
+
+        int realsprite_width = sprite_get_width(draw_sprite);
+        int realsprite_height = sprite_get_height(draw_sprite);
+
+        float u1 = left / realsprite_width;
+        float v1 = top / realsprite_height;
+        float u2 = (left + width) / realsprite_width;
+        float v2 = (top + height) / realsprite_height;
+
+        float x1 = draw_x - sprite_get_xoffset(draw_sprite) * scale_x;
+        float y1 = draw_y - sprite_get_yoffset(draw_sprite) * scale_y;
+
+        float real_width = width * scale_x;
+        float real_height = height * scale_y;
+
+        DrawTexturePro(
+            localTex,
+            (Rectangle){left, top, width, height},
+            (Rectangle){x1, y1, real_width, real_height},
+            (Vector2){0, 0},
+            rotation,
+            GetColor((int)color)
+        );
+    }
+
+    void draw_text(float _x, float _y, const char* text){
+        DrawText(text, _x, _y, 12, GetColor(drawcolor));
+    }
+
+#endif
+
 #pragma region //global funcs
 void draw_set_color(int color){
     drawcolor = color;

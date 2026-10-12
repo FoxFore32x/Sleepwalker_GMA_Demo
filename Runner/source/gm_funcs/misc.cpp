@@ -279,3 +279,17 @@ bool instance_exists(ObjectType inst){
     }
 #endif
 
+ #if defined(raylib)
+    void show_message(const char* message){
+        //I don't think gamecube has a thing for this?
+    }
+    
+    bool show_question(const char* message){
+        return false;
+    }
+
+    void show_error(const char* message, bool abort){
+        if (abort)
+            game_end();
+    }
+ #endif

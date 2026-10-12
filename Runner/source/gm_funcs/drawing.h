@@ -104,3 +104,10 @@ void placeHolderTileRoomFunc(int tileset, const int* data, const size_t dataSize
 
     void scr_startframe();
 #endif
+
+#ifdef raylib
+    #include <raylib.h>
+    #include <raymath.h>
+
+    void scr_startframe();
+#endif

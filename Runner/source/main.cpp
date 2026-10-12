@@ -26,6 +26,10 @@
     #include <ogc/lwp_watchdog.h>
 #endif
 
+#ifdef raylib
+    #include <raylib.h>
+#endif
+
 unsigned int bgcolor = 0xFF000000;
 GMViewPorts view_camera[9] = {
     {0, 0, 1366, 768, 0, 0, 1366, 768, 0, 0, 0, 0, false, false, -1}
@@ -83,6 +87,17 @@ int main(){
         lastTick = gettick();
     #endif
 
+    #ifdef raylib
+        InitWindow(640, 480, "GameMaker Anywhwere Application");
+        if (!IsWindowReady())
+            return 1;
+        SetTargetFPS(60);
+    #endif
+
+    #if defined(raylib) && !defined(dc)
+        InitAudioDevice();
+    #endif
+
     #if defined(__gamecube__) || defined(__wii__)
         ASND_Init();
     #endif
@@ -127,6 +142,11 @@ int main(){
         #ifdef __wii__
             if (gamepad_button_check(0, WPAD_BUTTON_HOME))
                 MarkedForClose = true;
+        #endif
+
+        #ifdef raylib
+            BeginDrawing();
+            //ClearBackground(RAYWHITE);
         #endif
 
         gamepad_scanner();

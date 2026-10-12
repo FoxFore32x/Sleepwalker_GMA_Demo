@@ -65,6 +65,7 @@ enum AudioLFOType{
 #define os_3ds 100
 #define os_gamecube 101
 #define os_wii 102
+#define os_dreamcast 103
 
 //gm built in
 #define os_windows 0
@@ -89,6 +90,8 @@ enum AudioLFOType{
     #define CURRENT_OS os_gamecube //gamecube
 #elif defined(__wii__)
     #define CURRENT_OS os_wii //wii
+#elif defined(dc)
+    #define CURRENT_OS os_dreamcast //dreamcast
 #else
     #define CURRENT_OS os_unknown //tf are you running?
 #endif
@@ -97,6 +100,8 @@ enum AudioLFOType{
     #define LoopOS aptMainLoop()
 #elif defined(__gamecube__) || defined(__wii__)
     #define LoopOS SYS_MainLoop()
+#elif defined(raylib)
+    #define LoopOS !WindowShouldClose()
 #endif
 
 extern int os_type;
